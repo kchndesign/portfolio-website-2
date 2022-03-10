@@ -1,0 +1,43 @@
+@use '../partials' as *;
+
+.selected-work {
+    &__header {
+        margin: 3rem 0;
+    }
+
+    .work {
+        margin: 3rem 0;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+
+            padding: 0 1rem;
+        }
+
+        &__chip-container {
+            flex-basis: 50%;
+            flex-grow: 1;
+            display: flex;
+            align-items: flex-end;
+            align-content: flex-end;
+            flex-wrap: wrap-reverse;
+
+            transform: translate(-0.5rem, 0);
+        }
+
+        &__chip {
+            font-size: 1rem;
+
+            margin: 0.2rem 0.2rem;
+            padding: 0rem 1em;
+
+            background-color: aliceblue;
+            border-radius: $chip-radius;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}

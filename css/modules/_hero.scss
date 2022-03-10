@@ -1,0 +1,28 @@
+@use '../partials';
+
+.hero {
+    height: 90vh;
+    max-height: calc(100% * (9 / 16));
+
+    &__left {
+        img {
+            width: 100%;
+            max-width: 30rem;
+        }
+    }
+
+    &__right {
+        .hero__title {
+            font-size: 3rem;
+        }
+
+        .hero__byline {
+            font-size: 2.25;
+            font-weight: 200;
+        }
+
+        .hero__para {
+            max-width: 30rem;
+        }
+    }
+}
