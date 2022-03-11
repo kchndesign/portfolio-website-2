@@ -22,6 +22,10 @@
             display: flex;
             align-items: center;
 
+            @include media-breakpoint-down(md) {
+                padding: 2rem 0;
+            }
+
             img {
                 width: 100%;
             }
@@ -46,17 +50,67 @@
             margin: 0.2rem 0.2rem;
             padding: 0rem 1em;
 
-            background-color: aliceblue;
+            background-color: $work-bg;
             border-radius: $chip-radius;
+        }
+
+        // classes to manually add gutters to work section
+
+        &--left {
+            @include media-breakpoint-up(md) {
+                padding-right: 12px;
+            }
+        }
+
+        &--right {
+            @include media-breakpoint-up(md) {
+                padding-left: 12px;
+            }
         }
     }
 
-    // .bg-color {
-    //     background-color: $bg-color;
-    //     color: white;
+    // backgroudn color class
+    .bg-color {
+        @include bg-color($work-bg);
 
-    //     .work__chip {
-    //         color: black;
-    //     }
-    // }
+        .work__chip {
+            background-color: white;
+        }
+
+        position: relative;
+        overflow: visible;
+
+        z-index: 0;
+
+        // side color bits
+        &::before {
+            content: '';
+            position: absolute;
+
+            width: calc(50vw - 50%);
+            height: 100%;
+
+            top: 0;
+            right: 100%;
+
+            background-color: $work-bg;
+
+            z-index: -1;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+
+            width: calc(50vw - 50%);
+            height: 100%;
+
+            top: 0;
+            left: 100%;
+
+            background-color: $work-bg;
+
+            z-index: -1;
+        }
+    }
 }

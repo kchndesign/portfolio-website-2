@@ -1,0 +1,9 @@
+@mixin bg-color($color) {
+    @if (lightness($color) > 70) {
+        background-color: $color;
+        color: black;
+    } @else {
+        background-color: $color;
+        color: white;
+    }
+}
