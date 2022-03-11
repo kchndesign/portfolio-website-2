@@ -2,25 +2,39 @@
 
 .selected-work {
     &__header {
-        margin: 3rem 0;
+        padding: 5rem 0 2rem 0;
     }
 
     .work {
-        margin: 3rem 0;
+        padding: 2.5rem 0;
+        position: relative;
 
         &__content {
             display: flex;
             flex-direction: column;
 
-            padding: 0 1rem;
+            @include media-breakpoint-down(md) {
+                padding: 2rem;
+            }
+        }
+
+        &__image {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 100%;
+            }
         }
 
         &__chip-container {
+            margin-top: 1rem;
+
             flex-basis: 50%;
             flex-grow: 1;
             display: flex;
             align-items: flex-end;
-            align-content: flex-end;
+            align-content: end;
             flex-wrap: wrap-reverse;
 
             transform: translate(-0.5rem, 0);
@@ -35,9 +49,14 @@
             background-color: aliceblue;
             border-radius: $chip-radius;
         }
-
-        img {
-            width: 100%;
-        }
     }
+
+    // .bg-color {
+    //     background-color: $bg-color;
+    //     color: white;
+
+    //     .work__chip {
+    //         color: black;
+    //     }
+    // }
 }

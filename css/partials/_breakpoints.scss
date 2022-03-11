@@ -15,7 +15,14 @@
 //    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))
 //    md
 
-@use 'config' as *;
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+) !default;
 
 @function breakpoint-next(
     $name,

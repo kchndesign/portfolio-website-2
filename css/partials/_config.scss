@@ -1,3 +1,5 @@
+@use 'breakpoints' as *;
+
 $max-width: 960px;
 
 $bg-color: rgb(42, 42, 42);
@@ -11,7 +13,9 @@ $chip-radius: 3rem;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto:wght@300&display=swap');
 
 html,
-a {
+body,
+a,
+p {
     font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
@@ -41,15 +45,13 @@ p {
     line-height: 1.6;
 }
 
+// wrapper styling is here because partials can't refer to each other without Sass freaking out
 .container-mw {
-    max-width: $max-width;
-}
+    max-width: calc($max-width + 2rem);
+    margin: auto;
+    padding: 0 2rem;
 
-$grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-    xxl: 1400px,
-) !default;
+    @include media-breakpoint-down(md) {
+        padding: 0 1rem;
+    }
+}

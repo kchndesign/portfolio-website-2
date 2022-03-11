@@ -1,4 +1,4 @@
-@use '../partials';
+@use '../partials' as *;
 
 .navbar {
     box-shadow: 0.5rem 0.5rem 0.5rem rgba(black, 0.1);
