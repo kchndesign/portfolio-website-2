@@ -202,17 +202,54 @@
                 </div>
             </section>
 
-            <form action="">
+            <form action="" class="contact">
+                <h2 class="contact__title">Contact me!</h2>
+                <p class="contact__byline">
+                    Fill in your details with your message and I'll get back to
+                    you soon!
+                </p>
                 <div class="row">
-                    <label for="contactEmail" class="col-sm-2 col-form-label"
+                    <label for="contactName" class="col-form-label col-md-2"
+                        >Your name:</label
+                    >
+                    <div class="col-md-10">
+                        <input
+                            type="text"
+                            name="contactName"
+                            id="contactName"
+                            class="form-control"
+                            placeholder="Alice and Bob"
+                        />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="contactEmail" class="col-md-2 col-form-label"
                         >Your email:</label
                     >
-                    <input
-                        type="email"
-                        name="contactEmail"
-                        id="contactEmail"
-                        class="form-control"
-                    />
+                    <div class="col-md-10">
+                        <input
+                            type="email"
+                            name="contactEmail"
+                            id="contactEmail"
+                            class="form-control"
+                            placeholder="you@company.com"
+                        />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="message" class="col-md-2 col-form-email">
+                        Your Message:
+                    </label>
+                    <div class="col-md-10">
+                        <textarea
+                            name="message"
+                            id="message"
+                            cols="30"
+                            rows="10"
+                            placeholder="Your Message Here."
+                            class="form-control"
+                        ></textarea>
+                    </div>
                 </div>
             </form>
         </main>

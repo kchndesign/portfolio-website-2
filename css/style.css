@@ -158,7 +158,11 @@ p {
 }
 
 .selected-work__header {
-  padding: 5rem 0 2rem 0;
+  padding: 5rem 0 0rem 0;
+}
+.selected-work__header h2 {
+  padding: 0;
+  margin: 0;
 }
 .selected-work .work {
   padding: 2.5rem 0;
