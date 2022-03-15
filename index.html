@@ -6,6 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
         <link rel="stylesheet" href="/css/style.css" />
+        <script
+            src="https://kit.fontawesome.com/65d37cc92e.js"
+            crossorigin="anonymous"
+        ></script>
         <title>Kevin Portfolio Draft</title>
     </head>
     <body>
@@ -35,13 +39,13 @@
                             >
                         </li>
                         <li class="nav-item px-2">
-                            <a href="" class="nav-link">Web Development</a>
+                            <a href="web-dev.html" class="nav-link">Web Development</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a href="" class="nav-link">Graphics Design</a>
+                            <a href="graphics-design.html" class="nav-link">Graphics Design</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a href="" class="nav-link">Product Design</a>
+                            <a href="product-design.html" class="nav-link">Product Design</a>
                         </li>
                     </ul>
                 </div>
@@ -84,7 +88,7 @@
                 <ul class="links__list row">
                     <li class="col-md-4">
                         <a
-                            href="#"
+                            href="web-dev.html"
                             target="_blank"
                             class="links__link link--web"
                         >
@@ -93,7 +97,7 @@
                     </li>
                     <li class="col-md-4">
                         <a
-                            href="#"
+                            href="graphics-design.html"
                             target="_blank"
                             class="links__link link--graphics"
                         >
@@ -102,7 +106,7 @@
                     </li>
                     <li class="col-md-4">
                         <a
-                            href="#"
+                            href="product-design.html"
                             target="_blank"
                             class="links__link link--product"
                         >
@@ -112,7 +116,7 @@
                 </ul>
             </section>
             <section class="selected-work">
-                <div class="selected-work__header bg-color">
+                <div class="selected-work__header">
                     <h2>Selected Work</h2>
                 </div>
                 <div class="work bg-color row g-0">
@@ -193,57 +197,125 @@
                 </div>
             </section>
 
-            <form action="" class="contact">
-                <h2 class="contact__title">Contact me!</h2>
+            <section class="contact" aria-label="Contact Me">
+                <h2 class="contact__title">Contact Me!</h2>
                 <p class="contact__byline">
-                    Fill in your details with your message and I'll get back to
-                    you soon!
+                    Here are all of the ways that you can get a hold of me.
                 </p>
-                <div class="row">
-                    <label for="contactName" class="col-form-label col-md-2"
-                        >Your name:</label
+                <div class="contact__row">
+                    <a
+                        href="https://www.linkedin.com/in/kevinchen-1/"
+                        class="contact__link"
+                        target="_blank"
                     >
-                    <div class="col-md-10">
-                        <input
-                            type="text"
-                            name="contactName"
-                            id="contactName"
-                            class="form-control"
-                            placeholder="Alice and Bob"
-                        />
-                    </div>
+                        <i
+                            class="fa fa-linkedin-square contact__icon"
+                            aria-hidden="true"
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">LinkedIn</p>
+                            <p class="contact__body">/kevinchen-1</p>
+                        </div>
+                    </a>
+                    <a href="mailto:kevin@kchn.com.au" class="contact__link"
+                    target="_blank">
+                        <i
+                            class="fa-solid fa-at contact__icon"
+                            aria-hidden="true"
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">Email</p>
+                            <p class="contact__body">kevin@kchn.com.au</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="row">
-                    <label for="contactEmail" class="col-md-2 col-form-label"
-                        >Your email:</label
+
+                <div class="contact__row">
+                    <a
+                        href="https://github.com/kchndesign"
+                        class="contact__link"
+                        target="_blank"
                     >
-                    <div class="col-md-10">
-                        <input
-                            type="email"
-                            name="contactEmail"
-                            id="contactEmail"
-                            class="form-control"
-                            placeholder="you@company.com"
-                        />
-                    </div>
+                        <i
+                            class="fa fa-github-square contact__icon"
+                            aria-hidden="true"
+                            
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">GitHub</p>
+                            <p class="contact__body">/kchndesign</p>
+                        </div>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/kchndesign/"
+                        class="contact__link"
+                        target="_blank"
+                    >
+                        <i
+                            class="fa fa-instagram contact__icon"
+                            aria-hidden="true"
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">Instagram</p>
+                            <p class="contact__body">@kchndesign</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="row">
-                    <label for="message" class="col-md-2 col-form-email">
-                        Your Message:
-                    </label>
-                    <div class="col-md-10">
-                        <textarea
-                            name="message"
-                            id="message"
-                            cols="30"
-                            rows="10"
-                            placeholder="Your Message Here."
-                            class="form-control"
-                        ></textarea>
-                    </div>
-                </div>
-            </form>
+            </section>
+
         </main>
+
+        <footer class="footer footer--dark row container-mw">
+            <div class="footer__logo col-12 col-md-4 order-3 order-md-0">
+                <img
+                    src="/img/logo2_white_outline.png"
+                    alt="Kevin's Logo"
+                />
+            </div>
+            <div class="footer__nav col-12 col-sm-6 col-md-4">
+                <div class="footer__links-wrapper">
+                    <h4>Website Links</h4>
+                    <ul class="">
+                        <li>
+                            <a href="index.html" >Home</a>
+                        </li>
+                        <li>
+                            <a href="web-dev.html" ">Web Development</a>
+                        </li>
+                        <li>
+                            <a href="graphics-design.html" >Graphics Design</a>
+                        </li>
+                        <li>
+                            <a href="product-design.html">Product Design</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__contact col-12 col-sm-6 col-md-4">
+                <div class="footer__links-wrapper">
+                    <h4>Contact Links</h4>
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/in/kevinchen-1/" target="_blank">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="mailto:kevin@kchn.com.au" target="_blank">Email</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/kchndesign" target="_blank">
+                                Github
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/kchndesign/" target="_blank">
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="order-4">&copy; 2022 Kevin Chen</p>
+        </footer>
         <script src="/bootstrap/js/bootstrap.js"></script>
     </body>
 </html>

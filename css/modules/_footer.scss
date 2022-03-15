@@ -1,0 +1,45 @@
+@use '../partials' as *;
+
+.footer {
+    @include bg-color($footer-bg);
+
+    padding: 5rem 0 0 0;
+
+    & > div {
+        padding-bottom: 5rem;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 8rem;
+        }
+    }
+
+    // styling for the links section
+    &__contact,
+    &__nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    ul,
+    li {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    a {
+        font-size: 1.25rem;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            color: darken(white, 30%);
+        }
+    }
+}

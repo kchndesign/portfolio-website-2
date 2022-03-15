@@ -1,9 +1,40 @@
 @mixin bg-color($color) {
+    position: relative;
+
     @if (lightness($color) > 70) {
         background-color: $color;
         color: black;
     } @else {
         background-color: $color;
         color: white;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+
+        width: calc(50vw - 50%);
+        height: 100%;
+
+        top: 0;
+        right: 100%;
+
+        background-color: $color;
+
+        z-index: -1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+
+        width: calc(50vw - 50%);
+        height: 100%;
+
+        top: 0;
+        left: 100%;
+
+        background-color: $color;
+
+        z-index: -1;
     }
 }
