@@ -1,0 +1,100 @@
+@use '../partials' as *;
+
+.web-hero {
+    padding: 10rem 0 5rem 0;
+
+    &__top-row {
+        .web-hero__top-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .web-hero__top-right {
+            text-align: right;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    // "Technology Stack" styling
+    &__tech {
+        margin: 5rem 0 3rem 0;
+    }
+
+    // technolgy stack details styling
+    &__detail {
+        margin: 1rem 0;
+
+        .detail {
+            &__body {
+                max-width: 20em;
+            }
+        }
+    }
+
+    // dark hero styling
+    // this is the default styling
+
+    background-color: $dark-hero-bg;
+    color: white;
+
+    // weird circles styling
+    position: relative;
+    overflow: hidden;
+
+    // make sure content is in front of background
+    * {
+        z-index: 2;
+    }
+
+    &::before {
+        content: '';
+
+        $circle-size: clamp(200px, 80vw, 1000px);
+
+        position: absolute;
+        // right: min(calc($circle-size / 2), calc((100% - 960px) / -2));
+        right: calc($circle-size / -3);
+        top: calc(100% - ($circle-size / 2));
+
+        width: $circle-size;
+        height: $circle-size;
+        border-radius: 50%;
+
+        // background-color: $dark-circle-small;
+        background-image: linear-gradient(
+            90deg,
+            $dark-circle-small,
+            rgba($dark-circle-small, 0)
+        );
+    }
+
+    &::after {
+        content: '';
+
+        $circle-size: clamp(800px, 100vw, 1500px);
+
+        z-index: 0;
+        position: absolute;
+        left: calc($circle-size / -3);
+        top: calc($circle-size / -2.5);
+
+        width: $circle-size;
+        height: $circle-size;
+        border-radius: 50%;
+
+        background-image: linear-gradient(
+            0deg,
+            $dark-circle-big,
+            rgba($dark-circle-big, 0)
+        );
+    }
+}
+
+.web-dev__body {
+    // dark body styling
+    background-color: $dark-body-bg;
+    color: white;
+}

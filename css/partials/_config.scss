@@ -2,14 +2,21 @@
 
 $max-width: 960px;
 
-$work-bg: rgb(242, 242, 242);
 $footer-bg: rgb(50, 50, 50);
 
 $h2-size: 2.25rem;
 $h3-size: 1.5rem;
 $p-size: 1.125rem;
 
+// index styling
+$work-bg: rgb(242, 242, 242);
 $chip-radius: 3rem;
+
+// web-dev styling
+$dark-hero-bg: #271346;
+$dark-body-bg: #050215;
+$dark-circle-big: #5251fe;
+$dark-circle-small: #66044b;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto:wght@300&display=swap');
 
