@@ -6,6 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="css/style.css">
+        <script
+            src="https://kit.fontawesome.com/65d37cc92e.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="js/web-dev.js"></script>
         <title>
             Web Development Projects - Kevin Chen Full Stack Developer
         </title>
@@ -56,9 +61,13 @@
             </div>
         </nav>
 
-        <div class="toggle" title="Toggle Dark Mode">
+        <div class="toggle">
             <div class="toggle__wrapper form-check form-switch">
-                <input type="checkbox" class="form-check-input" id="darkModeToggle" onclick="toggleClick(event);">
+                <input type="checkbox" class="form-check-input" id="darkModeToggle" onclick="toggleClick(event);"
+                aria-labelledby="toggleTip">
+                <span class="toggle__tooltip" role="tooltip" id="toggleTip">
+                    Toggle light mode here.
+                </span>
             </div>
         </div>
 
@@ -127,6 +136,72 @@
 
             <section class="gallery">
                 <h2 class="gallery__title">Projects</h2>
+            </section>
+
+            <section class="contact" aria-label="Contact Me">
+                <h2 class="contact__title">Contact Me!</h2>
+                <p class="contact__byline">
+                    Here are all of the ways that you can get a hold of me.
+                </p>
+                <div class="contact__row">
+                    <a
+                        href="https://www.linkedin.com/in/kevinchen-1/"
+                        class="contact__link"
+                        target="_blank"
+                    >
+                        <i
+                            class="fa fa-linkedin-square contact__icon"
+                            aria-hidden="true"
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">LinkedIn</p>
+                            <p class="contact__body">/kevinchen-1</p>
+                        </div>
+                    </a>
+                    <a href="mailto:kevin@kchn.com.au" class="contact__link"
+                    target="_blank">
+                        <i
+                            class="fa-solid fa-at contact__icon"
+                            aria-hidden="true"
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">Email</p>
+                            <p class="contact__body">kevin@kchn.com.au</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="contact__row">
+                    <a
+                        href="https://github.com/kchndesign"
+                        class="contact__link"
+                        target="_blank"
+                    >
+                        <i
+                            class="fa fa-github-square contact__icon"
+                            aria-hidden="true"
+                            
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">GitHub</p>
+                            <p class="contact__body">/kchndesign</p>
+                        </div>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/kchndesign/"
+                        class="contact__link"
+                        target="_blank"
+                    >
+                        <i
+                            class="fa fa-instagram contact__icon"
+                            aria-hidden="true"
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">Instagram</p>
+                            <p class="contact__body">@kchndesign</p>
+                        </div>
+                    </a>
+                </div>
             </section>
 
         </main>

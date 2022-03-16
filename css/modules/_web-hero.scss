@@ -8,9 +8,11 @@
 
     z-index: 3;
 
+    $toggle-width: 5rem;
+    $toggle-height: 7rem;
     // sizing for mouse over
-    width: 5rem;
-    height: 7rem;
+    width: $toggle-width;
+    height: $toggle-height;
 
     &__wrapper {
         transition: 0.5s;
@@ -28,11 +30,45 @@
         display: flex;
         justify-content: center;
         align-items: flex-end;
+
+        // for the tooltip
+        position: relative;
+    }
+
+    // tooltip styling
+    #toggleTip {
+        position: absolute;
+
+        // y position is wrapper plus gap
+        top: calc($toggle-height + 0.5rem);
+        // this is an approximate left: value :shrug:
+        left: -40%;
+
+        font-size: 0.85rem;
+        width: max-content;
+        padding: 0.3rem;
+        border-radius: 0.3rem;
+
+        color: black;
+        background-color: white;
+
+        // invisible by default
+        // display: none;
+        opacity: 0;
+
+        // transition?
+        transition: 0.5s;
     }
 
     &:hover {
         .toggle__wrapper {
+            // move button down
             transform: translateY(0);
+        }
+
+        #toggleTip {
+            // display: block;
+            opacity: 1;
         }
     }
 }
