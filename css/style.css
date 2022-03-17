@@ -280,12 +280,10 @@ p {
   }
 }
 .contact__link .contact__icon {
-  color: inherit;
   font-size: 4rem;
   width: min-content;
 }
 .contact__link .contact__text p {
-  color: inherit;
   font-size: 1.3rem;
   padding: 0;
   margin: 0;
@@ -294,12 +292,10 @@ p {
 .contact__link .contact__body {
   font-weight: bold;
 }
-.contact__link:hover {
-  color: inherit;
+hover styling .contact__link:hover {
   opacity: 0.8;
 }
-.contact__link:hover .contact__icon {
-  color: inherit;
+hover styling .contact__link:hover .contact__icon {
   opacity: 0.8;
 }
 
@@ -457,6 +453,9 @@ p {
   background-color: #050215;
   color: white;
 }
+.web-dev__body .contact__link {
+  color: white;
+}
 
 body.light {
   background-color: #f1efff;
@@ -471,4 +470,7 @@ body.light .web-hero::before {
 }
 body.light .web-hero::after {
   background-image: linear-gradient(0deg, #b8b8ff, rgba(184, 184, 255, 0));
+}
+body.light .contact__link {
+  color: black;
 }

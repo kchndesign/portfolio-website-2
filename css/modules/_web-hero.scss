@@ -172,6 +172,11 @@
     // dark body styling
     background-color: $dark-body-bg;
     color: white;
+
+    // here because of weird behaviour
+    .contact__link {
+        color: white;
+    }
 }
 
 // light mode styling!!!!
@@ -199,5 +204,10 @@ body.light {
                 rgba($light-circle-big, 0)
             );
         }
+    }
+
+    // here because of weird behaviour
+    .contact__link {
+        color: black;
     }
 }
