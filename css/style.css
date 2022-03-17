@@ -523,10 +523,11 @@ body {
   left: 13%;
   transform: translate(0, -50%);
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 .graphics__hero .hero__container .hero__logo-block img {
   width: 100%;
-  margin-top: auto;
   transform: translatex(-50%);
 }
 .graphics__hero .hero__container .hero__title {
