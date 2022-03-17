@@ -86,7 +86,7 @@ p {
     max-height: 35vh;
   }
   .hero__left img {
-    height: 100%;
+    width: 80%;
   }
   .hero__right {
     margin: 2rem 0;
@@ -94,9 +94,9 @@ p {
 }
 @media (min-width: 768px) {
   .hero {
-    min-height: 30rem;
-    height: 55rem;
-    max-height: calc(100vh - 4.5rem);
+    min-height: max-content;
+    height: 100vh;
+    max-height: 50rem;
   }
   .hero__left {
     margin: 0;
@@ -344,6 +344,11 @@ p {
   display: flex;
   justify-content: center;
 }
+@media (min-width: 768px) {
+  .footer__contact, .footer__nav {
+    display: block;
+  }
+}
 .footer ul,
 .footer li {
   list-style: none;
@@ -479,7 +484,7 @@ body.light .contact__link {
   color: black;
 }
 
-body {
+.graphics__body {
   background-color: #e8d0b4;
 }
 
@@ -488,7 +493,8 @@ body {
   background-color: #cd5f54;
   color: white;
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 4.5rem);
+  min-height: 25rem;
 }
 .graphics__hero::before {
   content: "";

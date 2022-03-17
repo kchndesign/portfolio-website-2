@@ -1,4 +1,4 @@
-@use '../partials' as *;
+@use "../partials" as *;
 
 .blocker {
     height: 4.5rem;
@@ -36,7 +36,7 @@
             margin: 1rem 0;
             max-height: 35vh;
             img {
-                height: 100%;
+                width: 80%;
             }
         }
 
@@ -48,9 +48,9 @@
     @include media-breakpoint-up(md) {
         // height: calc(100vw * (9 / 16));
         // max-height: calc(960px * (9 / 16));
-        min-height: 30rem;
-        height: 55rem;
-        max-height: calc(100vh - 4.5rem);
+        min-height: max-content;
+        height: 100vh;
+        max-height: 50rem;
         // max height = viewport height minus navbar blocker
         &__left {
             margin: 0;
