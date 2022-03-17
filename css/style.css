@@ -280,10 +280,12 @@ p {
   }
 }
 .contact__link .contact__icon {
+  color: inherit;
   font-size: 4rem;
   width: min-content;
 }
 .contact__link .contact__text p {
+  color: inherit;
   font-size: 1.3rem;
   padding: 0;
   margin: 0;
@@ -292,10 +294,12 @@ p {
 .contact__link .contact__body {
   font-weight: bold;
 }
-hover styling .contact__link:hover {
+.contact__link:hover {
+  color: inherit;
   opacity: 0.8;
 }
-hover styling .contact__link:hover .contact__icon {
+.contact__link:hover .contact__icon {
+  color: inherit;
   opacity: 0.8;
 }
 
@@ -473,4 +477,62 @@ body.light .web-hero::after {
 }
 body.light .contact__link {
   color: black;
+}
+
+body {
+  background-color: #e8d0b4;
+}
+
+.graphics__hero {
+  position: relative;
+  background-color: #cd5f54;
+  color: white;
+  position: relative;
+  height: 100vh;
+}
+.graphics__hero::before {
+  content: "";
+  position: absolute;
+  width: calc(50vw - 50%);
+  height: 100%;
+  top: 0;
+  right: 100%;
+  background-color: #cd5f54;
+  z-index: -1;
+}
+.graphics__hero::after {
+  content: "";
+  position: absolute;
+  width: calc(50vw - 50%);
+  height: 100%;
+  top: 0;
+  left: 100%;
+  background-color: #cd5f54;
+  z-index: -1;
+}
+.graphics__hero .hero__container {
+  width: fit-content;
+  margin: auto;
+}
+.graphics__hero .hero__container .hero__logo-block {
+  background-color: #2d4e4e;
+  width: 50%;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  transform: translate(0, -50%);
+  overflow: hidden;
+}
+.graphics__hero .hero__container .hero__logo-block img {
+  width: 100%;
+  transform: translatex(-50%);
+}
+.graphics__hero .hero__container .hero__title {
+  width: min-content;
+  font-size: clamp(1.5rem, 9vw, 5.5rem);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-20%, -50%);
 }

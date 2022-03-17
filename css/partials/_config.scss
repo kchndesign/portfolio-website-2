@@ -1,4 +1,4 @@
-@use 'breakpoints' as *;
+@use "breakpoints" as *;
 
 $max-width: 960px;
 
@@ -23,7 +23,12 @@ $light-body-bg: #f1efff;
 $light-circle-big: #b8b8ff;
 $light-circle-small: #ff71d8;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto:wght@300&display=swap');
+// graphics styling
+$graphics-body-bg: #e8d0b4;
+$graphics-hero-bg: #cd5f54;
+$graphics-hero-block: #2d4e4e;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto:wght@300&display=swap");
 
 html,
 body,

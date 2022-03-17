@@ -1,0 +1,53 @@
+@use "../partials" as *;
+
+// page styling
+
+body {
+    background-color: $graphics-body-bg;
+}
+
+// hero styling
+
+.graphics__hero {
+    @include bg-color($graphics-hero-bg);
+
+    position: relative;
+
+    height: 100vh;
+
+    .hero__container {
+        width: fit-content;
+        margin: auto;
+        // block and logo styling
+        .hero__logo-block {
+            background-color: $graphics-hero-block;
+
+            width: 50%;
+            aspect-ratio: 1;
+
+            position: absolute;
+
+            top: 50%;
+            left: 13%;
+            transform: translate(0, -50%);
+
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                margin-top: auto;
+                transform: translatex(-50%);
+            }
+        }
+
+        // title styling
+        .hero__title {
+            width: min-content;
+            font-size: clamp(1.5rem, 9vw, 5.5rem);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-20%, -50%);
+        }
+    }
+}
