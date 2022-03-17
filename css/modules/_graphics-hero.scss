@@ -43,11 +43,11 @@ body {
         // title styling
         .hero__title {
             width: min-content;
-            font-size: clamp(1.5rem, 9vw, 5.5rem);
+            font-size: clamp(1.5rem, 9.55vw, 6rem);
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-20%, -50%);
+            transform: translate(-23%, -50%);
         }
     }
 }
