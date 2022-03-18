@@ -1,4 +1,4 @@
-@use '../partials' as *;
+@use "../partials" as *;
 
 .links {
     &__list {
@@ -28,24 +28,56 @@
         justify-content: center;
         align-items: center;
 
-        font-family: Poppins, Arial, Helvetica, sans-serif;
         font-size: 2.25rem;
-        text-align: center;
 
         &.link--web {
-            background-image: url('http://via.placeholder.com/300x300');
+            background-image: url("http://via.placeholder.com/300x300");
             background-size: cover;
             background-position: center;
         }
 
+        // copy the styles of the graphics hero except with different text styling?
         &.link--graphics {
-            background-image: url('http://via.placeholder.com/300x300');
-            background-size: cover;
-            background-position: center;
+            background-color: $graphics-hero-bg;
+            color: white;
+            position: relative;
+
+            .link__container {
+                width: max-content;
+                margin: auto;
+
+                .link__logo-block {
+                    width: 50%;
+                    margin-left: 13%;
+                    aspect-ratio: 1;
+                    background-color: $graphics-hero-block;
+                    overflow: hidden;
+                }
+
+                .link__title {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-22%, -50%);
+
+                    font-family: Poppins, Arial, Helvetica, sans-serif;
+                    font-weight: 800;
+                    // responsive font size needs to be different because of layout changes.
+                    font-size: 9.55vw;
+                    @include media-breakpoint-up(md) {
+                        font-size: min(3.18vw, 1.97rem);
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    transform: translateX(-50%);
+                }
+            }
         }
 
         &.link--product {
-            background-image: url('http://via.placeholder.com/300x300');
+            background-image: url("http://via.placeholder.com/300x300");
             background-size: cover;
             background-position: center;
         }

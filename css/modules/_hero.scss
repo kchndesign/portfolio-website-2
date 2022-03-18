@@ -34,9 +34,8 @@
     @include media-breakpoint-up(sm) {
         &__left {
             margin: 1rem 0;
-            max-height: 35vh;
             img {
-                width: 80%;
+                height: 100%;
             }
         }
 
@@ -48,9 +47,9 @@
     @include media-breakpoint-up(md) {
         // height: calc(100vw * (9 / 16));
         // max-height: calc(960px * (9 / 16));
-        min-height: max-content;
+        min-height: 30rem;
         height: 100vh;
-        max-height: 50rem;
+        max-height: 60rem;
         // max height = viewport height minus navbar blocker
         &__left {
             margin: 0;
