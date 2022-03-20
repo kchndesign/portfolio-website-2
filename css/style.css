@@ -136,12 +136,45 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.25rem;
 }
 .links__link.link--web {
-  background-image: url("http://via.placeholder.com/300x300");
-  background-size: cover;
-  background-position: center;
+  background-color: #271346;
+  position: relative;
+  overflow: hidden;
+}
+.links__link.link--web svg {
+  width: 80%;
+  fill: white;
+}
+.links__link.link--web svg text {
+  color: white;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.links__link.link--web * {
+  z-index: 2;
+}
+.links__link.link--web::before {
+  content: "";
+  position: absolute;
+  right: -13.3333333333%;
+  top: 80%;
+  width: 40%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-image: linear-gradient(90deg, #66044b, rgba(102, 4, 75, 0));
+}
+.links__link.link--web::after {
+  content: "";
+  z-index: 0;
+  position: absolute;
+  left: -23.3333333333%;
+  top: -28%;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-image: linear-gradient(0deg, #5251fe, rgba(82, 81, 254, 0));
 }
 .links__link.link--graphics {
   background-color: #cd5f54;
@@ -165,6 +198,7 @@ p {
   left: 50%;
   transform: translate(-22%, -50%);
   font-family: Poppins, Arial, Helvetica, sans-serif;
+  line-height: 1.2;
   font-weight: 800;
   font-size: 9.55vw;
 }
@@ -569,4 +603,9 @@ body.light .contact__link {
   top: 50%;
   left: 50%;
   transform: translate(-23%, -50%);
+}
+
+.product__hero {
+  background-color: #151515;
+  height: 100vh;
 }

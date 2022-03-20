@@ -28,12 +28,71 @@
         justify-content: center;
         align-items: center;
 
-        font-size: 2.25rem;
-
         &.link--web {
-            background-image: url("http://via.placeholder.com/300x300");
-            background-size: cover;
-            background-position: center;
+            background-color: $dark-hero-bg;
+            position: relative;
+            overflow: hidden;
+
+            svg {
+                width: 80%;
+                fill: white;
+                text {
+                    color: white;
+                    font-family: Poppins, Arial, Helvetica, sans-serif;
+                    line-height: 1.2;
+                    font-weight: 800;
+                    // font-size: 3rem;
+                }
+            }
+
+            * {
+                z-index: 2;
+            }
+
+            &::before {
+                content: "";
+
+                $circle-size: 40%;
+
+                position: absolute;
+                // right: min(calc($circle-size / 2), calc((100% - 960px) / -2));
+                right: calc($circle-size / -3);
+                top: calc(100% - ($circle-size / 2));
+
+                width: $circle-size;
+                aspect-ratio: 1;
+                border-radius: 50%;
+
+                // background-color: $dark-circle-small;
+                background-image: linear-gradient(
+                    90deg,
+                    $dark-circle-small,
+                    rgba($dark-circle-small, 0)
+                );
+            }
+
+            &::after {
+                content: "";
+
+                // $circle-size: clamp(150px, 50%, 500px);
+
+                $circle-size: 70%;
+
+                z-index: 0;
+                position: absolute;
+                left: calc($circle-size / -3);
+                top: calc($circle-size / -2.5);
+
+                width: $circle-size;
+                aspect-ratio: 1;
+                border-radius: 50%;
+
+                background-image: linear-gradient(
+                    0deg,
+                    $dark-circle-big,
+                    rgba($dark-circle-big, 0)
+                );
+            }
         }
 
         // copy the styles of the graphics hero except with different text styling?
@@ -61,6 +120,7 @@
                     transform: translate(-22%, -50%);
 
                     font-family: Poppins, Arial, Helvetica, sans-serif;
+                    line-height: 1.2;
                     font-weight: 800;
                     // responsive font size needs to be different because of layout changes.
                     font-size: 9.55vw;
