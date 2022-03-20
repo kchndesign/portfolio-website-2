@@ -605,7 +605,7 @@ body.light .contact__link {
   transform: translate(-23%, -50%);
 }
 
-body {
+.product__body {
   background-color: #151515;
 }
 
