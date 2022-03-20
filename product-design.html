@@ -60,9 +60,9 @@
             </div>
         </nav>
 
-        <main>
-            <section aria-label="Product Design Hero section" class="product__hero">
-                <div class="banner scroll-rotate">
+        <main class="container-mw">
+            <section aria-label="Product Design Hero section" class="product__hero container-mw">
+                <div class="banner scroll-rotate d-none d-md-grid">
                     <div class="panel"></div>
                     <div class="panel"></div>
                     <div class="panel"></div>
@@ -89,12 +89,83 @@
                     <div class="panel"></div>
                 </div>
                 <div class="screen"></div>
+                <h1 class="product__hero__mobile-header d-block d-md-none">Industrial Design <br> Projects</h1>
             </section>
 
-            <div class="filler" aria-hidden="true" ></div>
+            <div class="filler" aria-hidden="true" >
 
-            <section aria-label="Industrial Design Projects Gallery"
-            class="ind-gallery"></section>
+            </div>
+
+            <section class="gallery gallery--ind" aria-label="Gallery">
+                <h2 class="gallery__title">Projects</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, minus. Ad, minus nam voluptatibus in odio voluptatem quis voluptates laudantium porro soluta vel fugiat magnam repudiandae? Autem aliquam eaque blanditiis?</p>
+            </section>
+
+            <section class="contact contact--product" aria-label="Contact Me">
+                <h2 class="contact__title">Contact Me!</h2>
+                <p class="contact__byline">
+                    Here are all of the ways that you can get a hold of me.
+                </p>
+                <div class="contact__row">
+                    <a
+                        href="https://www.linkedin.com/in/kevinchen-1/"
+                        class="contact__link"
+                        target="_blank"
+                    >
+                        <i
+                            class="fa fa-linkedin-square contact__icon"
+                            aria-hidden="true"
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">LinkedIn</p>
+                            <p class="contact__body">/kevinchen-1</p>
+                        </div>
+                    </a>
+                    <a href="mailto:kevin@kchn.com.au" class="contact__link"
+                    target="_blank">
+                        <i
+                            class="fa-solid fa-at contact__icon"
+                            aria-hidden="true"
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">Email</p>
+                            <p class="contact__body">kevin@kchn.com.au</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="contact__row">
+                    <a
+                        href="https://github.com/kchndesign"
+                        class="contact__link"
+                        target="_blank"
+                    >
+                        <i
+                            class="fa fa-github-square contact__icon"
+                            aria-hidden="true"
+                            
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">GitHub</p>
+                            <p class="contact__body">/kchndesign</p>
+                        </div>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/kchndesign/"
+                        class="contact__link"
+                        target="_blank"
+                    >
+                        <i
+                            class="fa fa-instagram contact__icon"
+                            aria-hidden="true"
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">Instagram</p>
+                            <p class="contact__body">@kchndesign</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
         </main>
 
         <footer class="footer footer--dark row container-mw">
