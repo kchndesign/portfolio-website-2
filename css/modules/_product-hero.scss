@@ -1,6 +1,88 @@
 @use "../partials" as *;
 
-.product__hero {
+body {
     background-color: $industrial-bg;
+}
+
+.product__hero {
+    display: grid;
+    place-items: center;
+    perspective: 900px;
+    perspective-origin: 50% calc(50% - 0px);
+    transform-style: preserve-3d;
+
+    // make it scroll under next element
+    position: fixed;
+    z-index: -1;
     height: 100vh;
+    width: 100%;
+
+    .banner {
+        display: flex;
+        transform-style: preserve-3d;
+        transform: translatey(-10px) rotatex(-3deg) rotatez(-30deg) scale(0.5)
+            rotatey(30deg);
+        // transform: scale(0.5);
+        // animation: rotate 24s infinite linear;
+        // transform: rotate(-30deg);
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotateZ(-39deg) rotateY(0deg);
+        }
+        to {
+            transform: rotateZ(-39deg) rotateY(-360deg);
+        }
+    }
+
+    $width: 140px;
+    $offset: 530px;
+    .panel {
+        position: absolute;
+        transform: translate(-50%, -50%) rotateY(var(--angle))
+            translateZ($offset);
+        width: $width;
+        height: 140px;
+        // border: 1px solid white;
+        // background-color: #fff4;
+        overflow: hidden;
+    }
+
+    .panel::before {
+        position: absolute;
+        left: var(--left);
+        content: "Industrial Design Projects";
+        color: white;
+        font-family: Poppins, arial, Helvetica, sans-serif;
+        font-size: 100px;
+        width: max-content;
+    }
+
+    @for $i from 0 to 24 {
+        .panel:nth-child(#{$i + 1}) {
+            --left: #{$width * $i * -1};
+            --angle: #{360deg / 24 * $i};
+        }
+    }
+
+    .screen {
+        filter: brightness(0.8);
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300px;
+        height: 300px;
+        background: transparent;
+        background-image: url("/img/drill2.webp");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translate(-50%, -40%);
+    }
+}
+
+.filler {
+    height: 230vh;
 }

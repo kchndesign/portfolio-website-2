@@ -605,7 +605,161 @@ body.light .contact__link {
   transform: translate(-23%, -50%);
 }
 
-.product__hero {
+body {
   background-color: #151515;
+}
+
+.product__hero {
+  display: grid;
+  place-items: center;
+  perspective: 900px;
+  perspective-origin: 50% calc(50% - 0px);
+  transform-style: preserve-3d;
+  position: fixed;
+  z-index: -1;
   height: 100vh;
+  width: 100%;
+}
+.product__hero .banner {
+  display: flex;
+  transform-style: preserve-3d;
+  transform: translatey(-10px) rotatex(-3deg) rotatez(-30deg) scale(0.5) rotatey(30deg);
+}
+@keyframes rotate {
+  from {
+    transform: rotateZ(-39deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateZ(-39deg) rotateY(-360deg);
+  }
+}
+.product__hero .panel {
+  position: absolute;
+  transform: translate(-50%, -50%) rotateY(var(--angle)) translateZ(530px);
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+}
+.product__hero .panel::before {
+  position: absolute;
+  left: var(--left);
+  content: "Industrial Design Projects";
+  color: white;
+  font-family: Poppins, arial, Helvetica, sans-serif;
+  font-size: 100px;
+  width: max-content;
+}
+.product__hero .panel:nth-child(1) {
+  --left: 0px;
+  --angle: 0deg;
+}
+.product__hero .panel:nth-child(2) {
+  --left: -140px;
+  --angle: 15deg;
+}
+.product__hero .panel:nth-child(3) {
+  --left: -280px;
+  --angle: 30deg;
+}
+.product__hero .panel:nth-child(4) {
+  --left: -420px;
+  --angle: 45deg;
+}
+.product__hero .panel:nth-child(5) {
+  --left: -560px;
+  --angle: 60deg;
+}
+.product__hero .panel:nth-child(6) {
+  --left: -700px;
+  --angle: 75deg;
+}
+.product__hero .panel:nth-child(7) {
+  --left: -840px;
+  --angle: 90deg;
+}
+.product__hero .panel:nth-child(8) {
+  --left: -980px;
+  --angle: 105deg;
+}
+.product__hero .panel:nth-child(9) {
+  --left: -1120px;
+  --angle: 120deg;
+}
+.product__hero .panel:nth-child(10) {
+  --left: -1260px;
+  --angle: 135deg;
+}
+.product__hero .panel:nth-child(11) {
+  --left: -1400px;
+  --angle: 150deg;
+}
+.product__hero .panel:nth-child(12) {
+  --left: -1540px;
+  --angle: 165deg;
+}
+.product__hero .panel:nth-child(13) {
+  --left: -1680px;
+  --angle: 180deg;
+}
+.product__hero .panel:nth-child(14) {
+  --left: -1820px;
+  --angle: 195deg;
+}
+.product__hero .panel:nth-child(15) {
+  --left: -1960px;
+  --angle: 210deg;
+}
+.product__hero .panel:nth-child(16) {
+  --left: -2100px;
+  --angle: 225deg;
+}
+.product__hero .panel:nth-child(17) {
+  --left: -2240px;
+  --angle: 240deg;
+}
+.product__hero .panel:nth-child(18) {
+  --left: -2380px;
+  --angle: 255deg;
+}
+.product__hero .panel:nth-child(19) {
+  --left: -2520px;
+  --angle: 270deg;
+}
+.product__hero .panel:nth-child(20) {
+  --left: -2660px;
+  --angle: 285deg;
+}
+.product__hero .panel:nth-child(21) {
+  --left: -2800px;
+  --angle: 300deg;
+}
+.product__hero .panel:nth-child(22) {
+  --left: -2940px;
+  --angle: 315deg;
+}
+.product__hero .panel:nth-child(23) {
+  --left: -3080px;
+  --angle: 330deg;
+}
+.product__hero .panel:nth-child(24) {
+  --left: -3220px;
+  --angle: 345deg;
+}
+.product__hero .screen {
+  filter: brightness(0.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: transparent;
+  background-image: url("/img/drill2.webp");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(-50%, -40%);
+}
+
+.filler {
+  height: 230vh;
 }
