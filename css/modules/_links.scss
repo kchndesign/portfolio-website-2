@@ -28,22 +28,25 @@
         justify-content: center;
         align-items: center;
 
+        // svgs are used in product design and web dev divs for responsive text
+        svg {
+            z-index: 1;
+
+            width: 80%;
+            fill: white;
+            text {
+                color: white;
+                font-family: Poppins, Arial, Helvetica, sans-serif;
+                line-height: 1.2;
+                font-weight: 800;
+                // font-size: 3rem;
+            }
+        }
+
         &.link--web {
             background-color: $dark-hero-bg;
             position: relative;
             overflow: hidden;
-
-            svg {
-                width: 80%;
-                fill: white;
-                text {
-                    color: white;
-                    font-family: Poppins, Arial, Helvetica, sans-serif;
-                    line-height: 1.2;
-                    font-weight: 800;
-                    // font-size: 3rem;
-                }
-            }
 
             * {
                 z-index: 2;
@@ -137,9 +140,25 @@
         }
 
         &.link--product {
-            background-image: url("http://via.placeholder.com/300x300");
+            position: relative;
+        }
+
+        // put background in pseudoelement so you can filter it
+        &.link--product::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background-image: url("/img/delta-drill/drill1.webp");
             background-size: cover;
             background-position: center;
+
+            filter: brightness(0.6);
+
+            z-index: 0;
         }
     }
 }

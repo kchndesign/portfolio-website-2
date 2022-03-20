@@ -137,20 +137,21 @@ p {
   justify-content: center;
   align-items: center;
 }
-.links__link.link--web {
-  background-color: #271346;
-  position: relative;
-  overflow: hidden;
-}
-.links__link.link--web svg {
+.links__link svg {
+  z-index: 1;
   width: 80%;
   fill: white;
 }
-.links__link.link--web svg text {
+.links__link svg text {
   color: white;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   line-height: 1.2;
   font-weight: 800;
+}
+.links__link.link--web {
+  background-color: #271346;
+  position: relative;
+  overflow: hidden;
 }
 .links__link.link--web * {
   z-index: 2;
@@ -212,9 +213,20 @@ p {
   transform: translateX(-50%);
 }
 .links__link.link--product {
-  background-image: url("http://via.placeholder.com/300x300");
+  position: relative;
+}
+.links__link.link--product::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/delta-drill/drill1.webp");
   background-size: cover;
   background-position: center;
+  filter: brightness(0.6);
+  z-index: 0;
 }
 
 .selected-work__header {
@@ -247,7 +259,9 @@ p {
   }
 }
 .selected-work .work__image img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 18rem;
+  margin: auto;
 }
 .selected-work .work__chip-container {
   margin-top: 1rem;
