@@ -1,0 +1,16 @@
+@use "../partials" as *;
+
+.project__main {
+    padding: 5rem 0;
+    img {
+        width: 100%;
+
+        &:first-of-type {
+            margin-top: 1rem;
+        }
+    }
+
+    img + p {
+        margin-top: 1rem;
+    }
+}

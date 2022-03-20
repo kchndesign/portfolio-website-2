@@ -28,8 +28,12 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        object-fit: cover;
+        width: 300px;
         min-width: 100%;
         min-height: 100%;
+
         z-index: 0;
 
         // styling for devices with no hover
@@ -58,7 +62,7 @@
 
         p,
         h3 {
-            transform: translateY(8rem);
+            transform: translateY(10rem);
             transition: ease 0.5s;
         }
 
