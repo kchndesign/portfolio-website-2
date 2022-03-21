@@ -669,6 +669,7 @@ body.light .contact__link {
   color: white;
   font-family: Poppins, arial, Helvetica, sans-serif;
   font-size: 100px;
+  word-spacing: 0.5em;
   width: max-content;
 }
 .product__hero .panel:nth-child(1) {
