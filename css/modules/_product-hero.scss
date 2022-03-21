@@ -72,7 +72,8 @@
     @for $i from 0 to 24 {
         .panel:nth-child(#{$i + 1}) {
             --left: #{$width * $i * -1};
-            --angle: #{360deg / 24 * $i};
+            // --angle: #{360deg / 24 * $i};
+            --angle: calc(360deg / 24 * #{$i});
         }
     }
 

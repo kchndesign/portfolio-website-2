@@ -1,3 +1,22 @@
+// how to use this gallery thing
+// <div class="gallery__row">
+
+//     <a href="[URL]" class="gallery__cell">
+
+//         <img class="gallery__image" src="img/delta-drill/drill1.webp" alt="Image of Delta Drill project">
+
+//         <h3 class="gallery__title">
+//             Delta Drill
+//         </h3>
+
+//         <p class="gallery__desc">
+//             What if Rowenta made a power drill?
+//         </p>
+
+//     </a>
+
+// </div>
+
 .gallery {
     padding: 5rem 0;
 
@@ -8,7 +27,7 @@
     }
 
     &__cell {
-        flex-basis: 15rem;
+        flex-basis: 16rem;
         flex-grow: 1;
         flex-shrink: 1;
         height: 20rem;
@@ -38,6 +57,11 @@
 
         // styling for devices with no hover
         filter: brightness(0.5);
+
+        &.image--top {
+            top: 0;
+            transform: translate(-50%, 0);
+        }
     }
 
     p,
@@ -62,8 +86,8 @@
 
         p,
         h3 {
-            transform: translateY(10rem);
-            transition: ease 0.5s;
+            transform: translateY(20rem);
+            transition: ease 0.3s;
         }
 
         // hover styling

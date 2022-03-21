@@ -673,99 +673,99 @@ body.light .contact__link {
 }
 .product__hero .panel:nth-child(1) {
   --left: 0px;
-  --angle: 0deg;
+  --angle: calc(360deg / 24 * 0);
 }
 .product__hero .panel:nth-child(2) {
   --left: -140px;
-  --angle: 15deg;
+  --angle: calc(360deg / 24 * 1);
 }
 .product__hero .panel:nth-child(3) {
   --left: -280px;
-  --angle: 30deg;
+  --angle: calc(360deg / 24 * 2);
 }
 .product__hero .panel:nth-child(4) {
   --left: -420px;
-  --angle: 45deg;
+  --angle: calc(360deg / 24 * 3);
 }
 .product__hero .panel:nth-child(5) {
   --left: -560px;
-  --angle: 60deg;
+  --angle: calc(360deg / 24 * 4);
 }
 .product__hero .panel:nth-child(6) {
   --left: -700px;
-  --angle: 75deg;
+  --angle: calc(360deg / 24 * 5);
 }
 .product__hero .panel:nth-child(7) {
   --left: -840px;
-  --angle: 90deg;
+  --angle: calc(360deg / 24 * 6);
 }
 .product__hero .panel:nth-child(8) {
   --left: -980px;
-  --angle: 105deg;
+  --angle: calc(360deg / 24 * 7);
 }
 .product__hero .panel:nth-child(9) {
   --left: -1120px;
-  --angle: 120deg;
+  --angle: calc(360deg / 24 * 8);
 }
 .product__hero .panel:nth-child(10) {
   --left: -1260px;
-  --angle: 135deg;
+  --angle: calc(360deg / 24 * 9);
 }
 .product__hero .panel:nth-child(11) {
   --left: -1400px;
-  --angle: 150deg;
+  --angle: calc(360deg / 24 * 10);
 }
 .product__hero .panel:nth-child(12) {
   --left: -1540px;
-  --angle: 165deg;
+  --angle: calc(360deg / 24 * 11);
 }
 .product__hero .panel:nth-child(13) {
   --left: -1680px;
-  --angle: 180deg;
+  --angle: calc(360deg / 24 * 12);
 }
 .product__hero .panel:nth-child(14) {
   --left: -1820px;
-  --angle: 195deg;
+  --angle: calc(360deg / 24 * 13);
 }
 .product__hero .panel:nth-child(15) {
   --left: -1960px;
-  --angle: 210deg;
+  --angle: calc(360deg / 24 * 14);
 }
 .product__hero .panel:nth-child(16) {
   --left: -2100px;
-  --angle: 225deg;
+  --angle: calc(360deg / 24 * 15);
 }
 .product__hero .panel:nth-child(17) {
   --left: -2240px;
-  --angle: 240deg;
+  --angle: calc(360deg / 24 * 16);
 }
 .product__hero .panel:nth-child(18) {
   --left: -2380px;
-  --angle: 255deg;
+  --angle: calc(360deg / 24 * 17);
 }
 .product__hero .panel:nth-child(19) {
   --left: -2520px;
-  --angle: 270deg;
+  --angle: calc(360deg / 24 * 18);
 }
 .product__hero .panel:nth-child(20) {
   --left: -2660px;
-  --angle: 285deg;
+  --angle: calc(360deg / 24 * 19);
 }
 .product__hero .panel:nth-child(21) {
   --left: -2800px;
-  --angle: 300deg;
+  --angle: calc(360deg / 24 * 20);
 }
 .product__hero .panel:nth-child(22) {
   --left: -2940px;
-  --angle: 315deg;
+  --angle: calc(360deg / 24 * 21);
 }
 .product__hero .panel:nth-child(23) {
   --left: -3080px;
-  --angle: 330deg;
+  --angle: calc(360deg / 24 * 22);
 }
 .product__hero .panel:nth-child(24) {
   --left: -3220px;
-  --angle: 345deg;
+  --angle: calc(360deg / 24 * 23);
 }
 .product__hero .screen {
   filter: brightness(0.8);
@@ -854,7 +854,7 @@ body.light .contact__link {
   margin: 3rem 0;
 }
 .gallery__cell {
-  flex-basis: 15rem;
+  flex-basis: 16rem;
   flex-grow: 1;
   flex-shrink: 1;
   height: 20rem;
@@ -878,6 +878,10 @@ body.light .contact__link {
   z-index: 0;
   filter: brightness(0.5);
 }
+.gallery__image.image--top {
+  top: 0;
+  transform: translate(-50%, 0);
+}
 .gallery p,
 .gallery h3 {
   color: white;
@@ -893,8 +897,8 @@ body.light .contact__link {
   }
   .gallery p,
 .gallery h3 {
-    transform: translateY(10rem);
-    transition: ease 0.5s;
+    transform: translateY(20rem);
+    transition: ease 0.3s;
   }
   .gallery__cell:hover .gallery__image {
     filter: brightness(0.5);
@@ -911,8 +915,10 @@ body.light .contact__link {
   width: 100%;
 }
 .project__main img:first-of-type {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
-.project__main img + p {
-  margin-top: 1rem;
+.project__main h3,
+.project__main h2,
+.project__main p {
+  margin: 1.5rem 0;
 }
