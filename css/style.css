@@ -787,7 +787,7 @@ body.light .contact__link {
   height: 100vh;
 }
 @media (min-width: 768px) {
-  .filler {
+  .filler--expands {
     height: 200vh;
   }
 }
@@ -923,6 +923,17 @@ body.light .contact__link {
 .project__main p {
   margin: 1.5rem 0;
 }
+.project__main .projects__aside {
+  font-style: italic;
+}
+.project__main li {
+  padding: 0.5rem 0;
+}
+.project__main .carousel-inner img {
+  width: 286px;
+  height: 600px;
+  margin: 3rem auto;
+}
 
 .ux-hero {
   width: 100%;
@@ -954,5 +965,39 @@ body.light .contact__link {
   top: 0;
   left: 100%;
   background-color: white;
+  z-index: -1;
+}
+.ux-hero h1 {
+  font-size: 4rem;
+}
+@media (max-width: 767.98px) {
+  .ux-hero h1 {
+    font-size: 3rem;
+  }
+}
+
+.gallery--ux {
+  position: relative;
+  background-color: black;
+  color: white;
+}
+.gallery--ux::before {
+  content: "";
+  position: absolute;
+  width: calc(50vw - 50%);
+  height: 100%;
+  top: 0;
+  right: 100%;
+  background-color: black;
+  z-index: -1;
+}
+.gallery--ux::after {
+  content: "";
+  position: absolute;
+  width: calc(50vw - 50%);
+  height: 100%;
+  top: 0;
+  left: 100%;
+  background-color: black;
   z-index: -1;
 }

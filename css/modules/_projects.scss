@@ -1,4 +1,4 @@
-@use "../partials" as *;
+@use '../partials' as *;
 
 .project__main {
     padding: 5rem 0;
@@ -14,5 +14,19 @@
     h2,
     p {
         margin: 1.5rem 0;
+    }
+
+    .projects__aside {
+        font-style: italic;
+    }
+
+    li {
+        padding: 0.5rem 0;
+    }
+
+    .carousel-inner img {
+        width: 286px;
+        height: 600px;
+        margin: 3rem auto;
     }
 }

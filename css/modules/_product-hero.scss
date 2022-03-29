@@ -1,4 +1,4 @@
-@use "../partials" as *;
+@use '../partials' as *;
 
 .product__body {
     background-color: $industrial-bg;
@@ -62,7 +62,7 @@
     .panel::before {
         position: absolute;
         left: var(--left);
-        content: "Industrial Design Projects";
+        content: 'Industrial Design Projects';
         color: white;
         font-family: Poppins, arial, Helvetica, sans-serif;
         font-size: 100px;
@@ -87,7 +87,7 @@
         width: 300px;
         height: 300px;
         background: transparent;
-        background-image: url("/img/drill2.webp");
+        background-image: url('/img/drill2.webp');
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -100,8 +100,10 @@
 .filler {
     height: 100vh;
 
-    @include media-breakpoint-up(md) {
-        height: 200vh;
+    &--expands {
+        @include media-breakpoint-up(md) {
+            height: 200vh;
+        }
     }
 }
 
