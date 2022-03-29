@@ -4,17 +4,29 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script
+            src="https://kit.fontawesome.com/65d37cc92e.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="js/web-dev.js"></script>
         <title>
             Web Development Projects - Kevin Chen Full Stack Developer
         </title>
+        <meta
+            name="description"
+            content="
+            As a _nology trainee, I am learning a full stack of technologies including: 
+            Javascript, Java SpringBoot, and cloud deployment.
+        "
+        />
     </head>
-    <body>
+    <body class="web-dev__body">
         <nav class="navbar navbar-expand-lg fixed-top bg-white navbar-light">
             <div class="container-fluid container-mw">
                 <a href="index.html" class="navbar-brand">
-                    <img src="/img/logo2_black_outline.png" alt="brand logo" />
+                    <img src="/img/logo2_black_outline.webp" alt="brand logo" />
                 </a>
 
                 <button
@@ -32,12 +44,10 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item px-2">
-                            <a href="index.html" class="nav-link active"
-                                >Home</a
-                            >
+                            <a href="index.html" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a href="web-dev.html" class="nav-link"
+                            <a href="web-dev.html" class="nav-link active"
                                 >Web Development</a
                             >
                         </li>
@@ -56,29 +66,201 @@
             </div>
         </nav>
 
-        <main>
+        <div class="toggle">
+            <div class="toggle__wrapper form-check form-switch">
+                <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="darkModeToggle"
+                    onclick="toggleClick(event);"
+                    aria-labelledby="toggleTip"
+                />
+                <span class="toggle__tooltip" role="tooltip" id="toggleTip">
+                    Toggle light mode here.
+                </span>
+            </div>
+        </div>
 
+        <main>
+            <section aria-label="Hero or information Section" class="web-hero">
+                <div class="container-mw web-hero__wrapper">
+                    <div class="web-hero__blocker" aria-hidden="true"></div>
+                    <div class="row web-hero__top-row">
+                        <div class="web-hero__top-left col-12 col-sm-6">
+                            <h1 class="web-hero__heading">
+                                Web Development Projects
+                            </h1>
+                            <p class="web-hero__body">
+                                I have been coding ever since I found out that
+                                you can create fake error messages on Windows XP
+                                using VBScript. Even as a product design
+                                student, I was always itching to learn new
+                                technologies and ways of applying them to
+                                products. I turned that knowledge into helping
+                                businesses perfect their online presence as a
+                                freelance digital designer. As a technology
+                                consultant at _nology, I am finally fulfilling
+                                my dream of becoming a full-stack developer.
+                            </p>
+                        </div>
+                        <div
+                            class="web-hero__top-right d-none d-sm-block col-sm-6"
+                        >
+                            <img
+                                src="img/kevincharacter.svg"
+                                alt="Web Development Illustration"
+                            />
+                        </div>
+                    </div>
+                    <div class="web-hero__tech">
+                        <h2>Technology Stack</h2>
+                    </div>
+                    <div class="row web-hero__details">
+                        <div class="web-hero__detail col-12 col-sm-6">
+                            <h3 class="detaiL__title">HTML / CSS</h3>
+                            <p class="detail__body">
+                                Experience using HTML and CSS to create personal
+                                websites and websites for clients. I am familiar
+                                with using BEM and SASS conventions. Also have
+                                experience using Bootstrap 5.
+                            </p>
+                        </div>
+                        <div class="web-hero__detail col-12 col-sm-6">
+                            <h3 class="detaiL__title">Javascript</h3>
+                            <p class="detail__body">
+                                Knowledge of using JavaScript in applications
+                                such as HTML5 Canvas, custom interaction and
+                                Node.js.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row web-hero__details">
+                        <div class="web-hero__detail col-12 col-sm-6">
+                            <h3 class="detaiL__title">Java Spring</h3>
+                            <p class="detail__body">
+                                Knowledge of using Java and Java Spring in
+                                creating web-servers, APIs, cloud applications
+                                and data handling.
+                            </p>
+                        </div>
+                        <div class="web-hero__detail col-12 col-sm-6">
+                            <h3 class="detaiL__title">React.js</h3>
+                            <p class="detail__body">
+                                Experience using React to produce interactive
+                                and dynamic web applications including
+                                interfacing with backend APIs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <main class="container-mw">
+            <section class="gallery">
+                <h2 class="gallery__title">Projects</h2>
+                <div class="gallery__row">
+                    <a href="projects/js-calculator.html" class="gallery__cell">
+                        <img
+                            class="gallery__image"
+                            src="jsCalculator/README-images/calculator-screenshot.png"
+                            alt="Image of Javascript Calculator project"
+                        />
+                        <h3 class="gallery__title">
+                            Neuemorphic Javascript Calculator
+                        </h3>
+                        <p class="gallery__desc">
+                            A simple JavaScript project.
+                        </p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="contact" aria-label="Contact Me">
+                <h2 class="contact__title">Contact Me!</h2>
+                <p class="contact__byline">
+                    Here are all of the ways that you can get a hold of me.
+                </p>
+                <div class="contact__row">
+                    <a
+                        href="https://www.linkedin.com/in/kevinchen-1/"
+                        class="contact__link"
+                        target="_blank"
+                    >
+                        <i
+                            class="fa fa-linkedin-square contact__icon"
+                            aria-hidden="true"
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">LinkedIn</p>
+                            <p class="contact__body">/kevinchen-1</p>
+                        </div>
+                    </a>
+                    <a
+                        href="mailto:kevin@kchn.com.au"
+                        class="contact__link"
+                        target="_blank"
+                    >
+                        <i
+                            class="fa-solid fa-at contact__icon"
+                            aria-hidden="true"
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">Email</p>
+                            <p class="contact__body">kevin@kchn.com.au</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="contact__row">
+                    <a
+                        href="https://github.com/kchndesign"
+                        class="contact__link"
+                        target="_blank"
+                    >
+                        <i
+                            class="fa fa-github-square contact__icon"
+                            aria-hidden="true"
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">GitHub</p>
+                            <p class="contact__body">/kchndesign</p>
+                        </div>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/kchndesign/"
+                        class="contact__link"
+                        target="_blank"
+                    >
+                        <i
+                            class="fa fa-instagram contact__icon"
+                            aria-hidden="true"
+                        ></i>
+                        <div class="contact__text">
+                            <p class="contact__heading">Instagram</p>
+                            <p class="contact__body">@kchndesign</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
         </main>
 
         <footer class="footer footer--dark row container-mw">
             <div class="footer__logo col-12 col-md-4 order-3 order-md-0">
-                <img
-                    src="/img/logo2_white_outline.png"
-                    alt="Kevin's Logo"
-                />
+                <img src="/img/logo2_white_outline.webp" alt="Kevin's Logo" />
             </div>
             <div class="footer__nav col-12 col-sm-6 col-md-4">
                 <div class="footer__links-wrapper">
                     <h4>Website Links</h4>
                     <ul class="">
                         <li>
-                            <a href="index.html" >Home</a>
+                            <a href="index.html">Home</a>
                         </li>
                         <li>
-                            <a href="web-dev.html" ">Web Development</a>
+                            <a href="web-dev.html">Web Development</a>
                         </li>
                         <li>
-                            <a href="graphics-design.html" >Graphics Design</a>
+                            <a href="graphics-design.html">Graphics Design</a>
                         </li>
                         <li>
                             <a href="product-design.html">Product Design</a>
@@ -91,18 +273,30 @@
                     <h4>Contact Links</h4>
                     <ul>
                         <li>
-                            <a href="https://www.linkedin.com/in/kevinchen-1/" target="_blank">LinkedIn</a>
+                            <a
+                                href="https://www.linkedin.com/in/kevinchen-1/"
+                                target="_blank"
+                                >LinkedIn</a
+                            >
                         </li>
                         <li>
-                            <a href="mailto:kevin@kchn.com.au" target="_blank">Email</a>
+                            <a href="mailto:kevin@kchn.com.au" target="_blank"
+                                >Email</a
+                            >
                         </li>
                         <li>
-                            <a href="https://github.com/kchndesign" target="_blank">
+                            <a
+                                href="https://github.com/kchndesign"
+                                target="_blank"
+                            >
                                 Github
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/kchndesign/" target="_blank">
+                            <a
+                                href="https://www.instagram.com/kchndesign/"
+                                target="_blank"
+                            >
                                 Instagram
                             </a>
                         </li>
@@ -112,5 +306,6 @@
             <p class="order-4">&copy; 2022 Kevin Chen</p>
         </footer>
         <script src="/bootstrap/js/bootstrap.js"></script>
+        <script src="js/dark-mode.js"></script>
     </body>
 </html>

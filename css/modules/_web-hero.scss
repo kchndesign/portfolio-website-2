@@ -1,0 +1,213 @@
+@use '../partials' as *;
+
+// dark mode toggle
+.toggle {
+    position: fixed;
+    top: 0rem;
+    right: 4.5rem;
+
+    z-index: 3;
+
+    $toggle-width: 5rem;
+    $toggle-height: 7rem;
+    // sizing for mouse over
+    width: $toggle-width;
+    height: $toggle-height;
+
+    &__wrapper {
+        transition: 0.5s;
+
+        background-color: white;
+        box-shadow: 0.5rem 0.5rem 0.5rem rgba(black, 0.1);
+
+        width: 100%;
+        height: 100%;
+        padding-bottom: 0.7rem;
+        border-radius: 0.3rem;
+
+        transform: translateY(-2rem);
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        // for the tooltip
+        position: relative;
+    }
+
+    // tooltip styling
+    #toggleTip {
+        position: absolute;
+
+        // y position is wrapper plus gap
+        top: calc($toggle-height + 0.5rem);
+        // this is an approximate left: value :shrug:
+        left: -40%;
+
+        font-size: 0.85rem;
+        width: max-content;
+        padding: 0.3rem;
+        border-radius: 0.3rem;
+
+        color: black;
+        background-color: white;
+
+        // invisible by default
+        // display: none;
+        opacity: 0;
+
+        // transition?
+        transition: 0.5s;
+    }
+
+    &:hover {
+        .toggle__wrapper {
+            // move button down
+            transform: translateY(0);
+        }
+
+        #toggleTip {
+            // display: block;
+            opacity: 1;
+        }
+    }
+}
+
+// hero styling
+.web-hero {
+    padding: 10rem 0 5rem 0;
+
+    &__top-row {
+        .web-hero__top-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .web-hero__top-right {
+            text-align: right;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    // "Technology Stack" styling
+    &__tech {
+        margin: 5rem 0 3rem 0;
+    }
+
+    // technolgy stack details styling
+    &__detail {
+        margin: 1rem 0;
+
+        .detail {
+            &__body {
+                max-width: 20em;
+            }
+        }
+    }
+
+    // dark hero styling
+    // this is the default styling
+
+    background-color: $dark-hero-bg;
+    color: white;
+
+    // weird circles styling
+    position: relative;
+    overflow: hidden;
+
+    // make sure content is in front of background
+    * {
+        z-index: 2;
+    }
+
+    &::before {
+        content: '';
+
+        $circle-size: clamp(200px, 80vw, 1000px);
+
+        position: absolute;
+        // right: min(calc($circle-size / 2), calc((100% - 960px) / -2));
+        right: calc($circle-size / -3);
+        top: calc(100% - ($circle-size / 2));
+
+        width: $circle-size;
+        height: $circle-size;
+        border-radius: 50%;
+
+        // background-color: $dark-circle-small;
+        background-image: linear-gradient(
+            90deg,
+            $dark-circle-small,
+            rgba($dark-circle-small, 0)
+        );
+    }
+
+    &::after {
+        content: '';
+
+        $circle-size: clamp(800px, 100vw, 1500px);
+
+        z-index: 0;
+        position: absolute;
+        left: calc($circle-size / -3);
+        top: calc($circle-size / -2.5);
+
+        width: $circle-size;
+        height: $circle-size;
+        border-radius: 50%;
+
+        background-image: linear-gradient(
+            0deg,
+            $dark-circle-big,
+            rgba($dark-circle-big, 0)
+        );
+    }
+}
+
+// background styling
+.web-dev__body {
+    // dark body styling
+    background-color: $dark-body-bg;
+    color: white;
+
+    // here because of weird behaviour
+    .contact__link {
+        color: white;
+    }
+}
+
+// light mode styling!!!!
+
+body.light {
+    background-color: $light-body-bg;
+    color: black;
+
+    .web-hero {
+        background-color: $light-hero-bg;
+        color: black;
+
+        &::before {
+            background-image: linear-gradient(
+                0deg,
+                $light-circle-small,
+                rgba($light-circle-small, 0)
+            );
+        }
+
+        &::after {
+            background-image: linear-gradient(
+                0deg,
+                $light-circle-big,
+                rgba($light-circle-big, 0)
+            );
+        }
+    }
+
+    // here because of weird behaviour
+    .contact__link {
+        color: black;
+    }
+}

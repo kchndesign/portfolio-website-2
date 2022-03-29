@@ -1,4 +1,4 @@
-@use '../partials' as *;
+@use "../partials" as *;
 
 .footer {
     @include bg-color($footer-bg);
@@ -24,6 +24,11 @@
     &__nav {
         display: flex;
         justify-content: center;
+
+        // left aligned for large screens
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
     }
 
     ul,

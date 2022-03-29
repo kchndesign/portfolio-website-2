@@ -1,0 +1,105 @@
+// how to use this gallery thing
+// <div class="gallery__row">
+
+//     <a href="[URL]" class="gallery__cell">
+
+//         <img class="gallery__image" src="img/delta-drill/drill1.webp" alt="Image of Delta Drill project">
+
+//         <h3 class="gallery__title">
+//             Delta Drill
+//         </h3>
+
+//         <p class="gallery__desc">
+//             What if Rowenta made a power drill?
+//         </p>
+
+//     </a>
+
+// </div>
+
+.gallery {
+    padding: 5rem 0;
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 3rem 0;
+    }
+
+    &__cell {
+        flex-basis: 16rem;
+        flex-grow: 1;
+        flex-shrink: 1;
+        height: 20rem;
+        overflow: hidden;
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 2rem;
+
+        text-decoration: none;
+    }
+
+    &__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        object-fit: cover;
+        width: 300px;
+        min-width: 100%;
+        min-height: 100%;
+
+        z-index: 0;
+
+        // styling for devices with no hover
+        filter: brightness(0.5);
+
+        &.image--top {
+            top: 0;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    p,
+    h3 {
+        color: white;
+        position: relative;
+    }
+
+    &__desc {
+        margin-bottom: 0;
+    }
+}
+
+// this tests whether the users input device can hover over elements
+// if so, this styling is included
+@media (hover) {
+    .gallery {
+        // reset styling to before hover state
+        &__image {
+            filter: brightness(1);
+        }
+
+        p,
+        h3 {
+            transform: translateY(20rem);
+            transition: ease 0.3s;
+        }
+
+        // hover styling
+        &__cell:hover {
+            .gallery__image {
+                filter: brightness(0.5);
+            }
+
+            p,
+            h3 {
+                transform: translate(0, 0);
+            }
+        }
+    }
+}

@@ -1,4 +1,4 @@
-@use '../partials' as *;
+@use "../partials" as *;
 
 .links {
     &__list {
@@ -28,26 +28,137 @@
         justify-content: center;
         align-items: center;
 
-        font-family: Poppins, Arial, Helvetica, sans-serif;
-        font-size: 2.25rem;
-        text-align: center;
+        // svgs are used in product design and web dev divs for responsive text
+        svg {
+            z-index: 1;
 
-        &.link--web {
-            background-image: url('http://via.placeholder.com/300x300');
-            background-size: cover;
-            background-position: center;
+            width: 80%;
+            fill: white;
+            text {
+                color: white;
+                font-family: Poppins, Arial, Helvetica, sans-serif;
+                line-height: 1.2;
+                font-weight: 800;
+                // font-size: 3rem;
+            }
         }
 
+        &.link--web {
+            background-color: $dark-hero-bg;
+            position: relative;
+            overflow: hidden;
+
+            * {
+                z-index: 2;
+            }
+
+            &::before {
+                content: "";
+
+                $circle-size: 40%;
+
+                position: absolute;
+                // right: min(calc($circle-size / 2), calc((100% - 960px) / -2));
+                right: calc($circle-size / -3);
+                top: calc(100% - ($circle-size / 2));
+
+                width: $circle-size;
+                aspect-ratio: 1;
+                border-radius: 50%;
+
+                // background-color: $dark-circle-small;
+                background-image: linear-gradient(
+                    90deg,
+                    $dark-circle-small,
+                    rgba($dark-circle-small, 0)
+                );
+            }
+
+            &::after {
+                content: "";
+
+                // $circle-size: clamp(150px, 50%, 500px);
+
+                $circle-size: 70%;
+
+                z-index: 0;
+                position: absolute;
+                left: calc($circle-size / -3);
+                top: calc($circle-size / -2.5);
+
+                width: $circle-size;
+                aspect-ratio: 1;
+                border-radius: 50%;
+
+                background-image: linear-gradient(
+                    0deg,
+                    $dark-circle-big,
+                    rgba($dark-circle-big, 0)
+                );
+            }
+        }
+
+        // copy the styles of the graphics hero except with different text styling?
         &.link--graphics {
-            background-image: url('http://via.placeholder.com/300x300');
-            background-size: cover;
-            background-position: center;
+            background-color: $graphics-hero-bg;
+            color: white;
+            position: relative;
+
+            .link__container {
+                width: max-content;
+                margin: auto;
+
+                .link__logo-block {
+                    width: 50%;
+                    margin-left: 13%;
+                    aspect-ratio: 1;
+                    background-color: $graphics-hero-block;
+                    overflow: hidden;
+                }
+
+                .link__title {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-22%, -50%);
+
+                    font-family: Poppins, Arial, Helvetica, sans-serif;
+                    line-height: 1.2;
+                    font-weight: 800;
+                    // responsive font size needs to be different because of layout changes.
+                    font-size: 9.55vw;
+                    @include media-breakpoint-up(md) {
+                        font-size: min(3.18vw, 1.97rem);
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    transform: translateX(-50%);
+                }
+            }
         }
 
         &.link--product {
-            background-image: url('http://via.placeholder.com/300x300');
+            position: relative;
+        }
+
+        // put background in pseudoelement so you can filter it
+        &.link--product::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background-image: url("/img/delta-drill/drill1.webp");
             background-size: cover;
             background-position: center;
+
+            filter: brightness(0.6);
+
+            z-index: 0;
         }
     }
 }
