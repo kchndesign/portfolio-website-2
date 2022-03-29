@@ -4,6 +4,8 @@ This is my personal website to be used as a digital portfolio for my design and
 web development experience. It was designed in Figma and uses Bootstrap 5.0 for
 layout and SCSS.
 
+## [**Find this website hosted here**](https://kchn.com.au)
+
 ## Contents
 
 -   ## [Project Brief](#project-brief-1)
