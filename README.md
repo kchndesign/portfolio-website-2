@@ -1,5 +1,7 @@
 # Personal Portfolio Website
 
+![Screenshot of the website landing page.](./README-images/home-page-screenshot.png)
+
 This is my personal website to be used as a digital portfolio for my design and
 web development experience. It was designed in Figma and uses Bootstrap 5.0 for
 layout and SCSS.
