@@ -1,3 +1,6 @@
 [submodule "jsCalculator"]
 	path = jsCalculator
 	url = git@github.com:kchndesign/jsCalculator.git
+[submodule "morse-code-translator"]
+	path = morse-code-translator
+	url = git@github.com:kchndesign/morse-code-translator.git

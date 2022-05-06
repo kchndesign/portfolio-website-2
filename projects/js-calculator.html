@@ -89,6 +89,302 @@
                     HTML/SCSS. It takes some design inspiration from the Teenage
                     Engineering OP-1.
                 </p>
+
+                <h2 id="-contents-"><strong>Contents</strong></h2>
+                <ul>
+                    <li>
+                        <a href="#project-brief-1">Project Brief</a>
+                    </li>
+                    <li>
+                        <a href="#design-1">Design</a>
+                    </li>
+                    <li>
+                        <a href="#technical-implementation-1"
+                            >Technical Implementation</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#project-reflection-1">Project Reflection</a>
+                    </li>
+                </ul>
+                <hr />
+                <h2 id="project-brief">Project Brief</h2>
+                <h3 id="aims">Aims</h3>
+                <p>
+                    The goal of this project is to reinforce learning in a few
+                    areas.
+                </p>
+                <p><strong>Javascript</strong></p>
+                <p>
+                    I wanted to gain further experience managing complex logic
+                    trees and working with DOM interaction.
+                </p>
+                <p><strong>Javascript Modules</strong></p>
+                <p>
+                    I wanted to try out organising my code into modules and
+                    enforcing the idea of pure functions as a way to create
+                    cleaner code.
+                </p>
+                <p><strong>Unit Testing and TDD</strong></p>
+                <p>
+                    I also wanted to try out test-driven-development as a way of
+                    organising a code-base and making sure I fully understood
+                    how my program worked before I started implementing my
+                    ideas.
+                </p>
+                <h3 id="minimum-viable-product">Minimum Viable Product</h3>
+                <p><strong>HTML/CSS</strong></p>
+                <ul>
+                    <li>
+                        Create a calculator to be rendered on the HTML page.
+                    </li>
+                    <li>It should have number keys from 0-9.</li>
+                    <li>It should have operator keys (+, -, *, /)</li>
+                    <li>
+                        It should have a display rendering the current
+                        calculation in a box at the top.
+                    </li>
+                    <li>It should also have a &quot;.&quot; key</li>
+                </ul>
+                <p><strong>JavaScript</strong></p>
+                <ul>
+                    <li>
+                        Should render the current calculation in a box at the
+                        top.
+                    </li>
+                    <li>It should handle decimals.</li>
+                    <li>
+                        It doesn&#39;t need to support orders of operations.
+                    </li>
+                    <li>It should not use eval() or Function() constructor.</li>
+                </ul>
+                <h2 id="design">Design</h2>
+                <p>
+                    The calculator was inspired by the OP-1, designed by Teenage
+                    Engineering.
+                </p>
+                <p>
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/CNCD_Berlin_session_2019_%282019-04-27_13.52.18_by_Ville_Hyv%C3%B6nen%29.jpg/800px-CNCD_Berlin_session_2019_%282019-04-27_13.52.18_by_Ville_Hyv%C3%B6nen%29.jpg"
+                        alt="Photo of the Teenage Engineering OP-1, pictured in the middle."
+                    />
+                </p>
+                <p>
+                    <em
+                        >The Teenage Engineering OP-1 pictured in the middle.
+                        From Ville Hyvönen on Wikimedia Commons.</em
+                    >
+                </p>
+                <h2 id="technical-implementation">Technical Implementation</h2>
+                <h3 id="javascript">Javascript</h3>
+                <p><strong>File Structure</strong></p>
+                <p>The javascript files were structured like so:</p>
+                <pre><code>index<span class="hljs-selector-class">.html</span>
+    js/
+        modules/
+            module<span class="hljs-selector-class">.js</span>
+            module1<span class="hljs-selector-class">.js</span>
+        main<span class="hljs-selector-class">.js</span>
+    tests/
+        modules/
+            module<span class="hljs-selector-class">.test</span><span class="hljs-selector-class">.js</span>
+            module1<span class="hljs-selector-class">.test</span><span class="hljs-selector-class">.js</span>
+</code></pre>
+                <p><strong>Writing and using unit tests</strong></p>
+                <p>
+                    There were four pure functions in this application, all
+                    related to processing the inputs and parsing them as math
+                    operations. They were each designed while writing the unit
+                    tests to make sure that they received and returned the
+                    proper data and sanitised their inputs when appropriate.
+                </p>
+                <p>
+                    When coding them, they were tested until they satisfied all
+                    the tests.
+                </p>
+                <p>
+                    <strong>Using element.dataset for interaction logic</strong>
+                </p>
+                <p>
+                    I originally used data attributes to help program the core
+                    logic of the program. I used a combination of states stored
+                    in the parent div as data attributes as well as on each
+                    button to lay out the logic tree of the interaction
+                </p>
+                <pre><code>data-current-<span class="hljs-keyword">operator</span>:
+    none: no current <span class="hljs-keyword">operator</span>
+    plus, minus, times, divide:
+        this one <span class="hljs-keyword">has</span> been pressed
+
+data-button-<span class="hljs-keyword">type</span>: the <span class="hljs-keyword">type</span> <span class="hljs-keyword">of</span> button
+    that was just pressed e.g.
+    <span class="hljs-keyword">operator</span>, number, <span class="hljs-keyword">equals</span>, decimal, clear
+
+data-clean: <span class="hljs-keyword">true</span> <span class="hljs-keyword">or</span> <span class="hljs-keyword">false</span>
+    This <span class="hljs-keyword">is</span> useful so we know when <span class="hljs-keyword">to</span>
+    accept certain inputs e.g reject
+    <span class="hljs-keyword">operator</span> presses when there <span class="hljs-keyword">is</span> no
+    previous <span class="hljs-keyword">result</span>.
+</code></pre>
+                <p>
+                    I found that having to manually manage the state of the
+                    calculator after ever event was too difficult to keep track
+                    of, and made my code too hard to read.
+                </p>
+                <p>
+                    <strong>Interaction logic using a stateful object</strong>
+                </p>
+                <p>
+                    My solution to this was to use a single object that had the
+                    necessary states as properties. This object also had a
+                    method called <code>getCalcState()</code> that would go
+                    through all the necessary DOM interactions to update itself
+                    to reflect the proper state of the calculator.
+                </p>
+                <p>
+                    In the event handler, I called this method after processing
+                    every event so the state will be ready for the next event. I
+                    was anxious that performing intensive DOM interactions every
+                    click might introduce some lag, so I only updated after all
+                    of the event operations were handled.
+                </p>
+                <p>
+                    I realise now that I could have used the
+                    <code>get</code> functionality so that only the properties
+                    that were looked up were updated.
+                </p>
+                <p>
+                    <strong
+                        >Using element.textContent for displaying and processing
+                        inputs</strong
+                    >
+                </p>
+                <p>
+                    Using the textContent property of each button element was a
+                    very easy way of putting interaction events onto the
+                    display. However you should be careful using this property
+                    because it also grabs the whitespace in the html file as
+                    well. I fixed this by setting putting
+                    <code
+                        >&quot;prettier.htmlWhitespaceSensitivity&quot;:
+                        &quot;strict&quot;</code
+                    >
+                    in the workspace settings.json file.
+                </p>
+                <p><strong>Evaluating Expressions</strong></p>
+                <p>
+                    Since I am limited by not being able to use
+                    <code>eval()</code> or the
+                    <code>Function()</code> constructor, I needed to find my own
+                    solution to taking user inputs and outputting a final
+                    result. I used three different functions to return the final
+                    string that would be the result of the user-inputted maths
+                    operation. The choice to split operations up to such
+                    granularity was two pronged; I wanted a chance to implement
+                    test-driven-development as much as I could, and I wanted to
+                    separate the concerns as much as possible.
+                </p>
+                <p>
+                    On pressing of the &#39;=&#39; button, I grabbed the
+                    textContent of the &#39;p&#39; tags that displayed the
+                    numbers. This returned an array of strings that I passed
+                    onto the first function:
+                </p>
+                <ol>
+                    <li>
+                        <p>
+                            The first function evaluated those strings to
+                            determine if the previous result should be part of
+                            the evaluation. If the previous result was
+                            <code>120</code> and the user inputted
+                            <code>+10</code>, then the previous result is
+                            needed. However if the input is its own
+                            self-contained maths operation: <code>120+10</code>,
+                            then only the current input is passed on as a
+                            string.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The second function turns the string that it is
+                            given and turns it into an array of numbers and
+                            instructions in the form of strings:
+                            <code>[120, &#39;plus&#39;, 10]</code>. Since it
+                            needs to return valid numbers and instructions, this
+                            function will strictly sanitise its input and throw
+                            an error if it receives errant inputs.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The third function takes that array of numbers and
+                            instructions and loops through them, almost like a
+                            <code>reduce()</code> function. It adds a number to
+                            an accumulator variable. Then as it comes across an
+                            instruction (like &#39;plus&#39;), it will save that
+                            in another variable. It will then perform a math
+                            operation: the accumulator variable, the current
+                            operation, and the next number in the array. E.g:
+                        </p>
+                        <pre><code>accumulator = <span class="hljs-number">120</span>;
+currentOperation = <span class="hljs-string">'plus'</span>;
+<span class="hljs-regexp">//</span> <span class="hljs-keyword">next</span> number <span class="hljs-keyword">in</span> <span class="hljs-symbol">array:</span>
+num = <span class="hljs-number">10</span>;
+<span class="hljs-regexp">//</span> we <span class="hljs-keyword">then</span> <span class="hljs-keyword">do</span> <span class="hljs-symbol">this:</span>
+accumulator = accumulator + <span class="hljs-number">10</span>;
+</code></pre>
+                    </li>
+                    <li>
+                        <p>
+                            The fourth function takes the result and formats it
+                            for the display of the calculator. It takes two
+                            numbers, the first one is the number to be formatted
+                            and the second one is how many digits it should be
+                            formatted to. If the length of the number is less
+                            than the digits specified, it will just return the
+                            number as a string. If the number is too long, it
+                            will use <code>Number.toPrecision()</code> to format
+                            the number into scientific notation so it will fit
+                            the calculator.
+                        </p>
+                    </li>
+                </ol>
+                <h3 id="thoughts">Thoughts</h3>
+                <p>
+                    The test-driven development for the three expression
+                    evaluation functions was helpful in keeping my thoughts
+                    organised and prevented me from having to redesign the
+                    function as I write it.
+                </p>
+                <p>
+                    Thanks to the testing requirements that I wrote for myself,
+                    I ended up with an application with many layers of error
+                    handling, even when the previous function should have
+                    handled the same exception. But I think an application
+                    designed like this is more robust and has a better chance of
+                    surviving feature changes and code maintenance.
+                </p>
+                <p>
+                    I received some feedback saying that my code was
+                    logic-heavy, meaning that one would need to dive into
+                    functions in order to decipher what they were doing. A
+                    better programmer might have used more explicit variable
+                    names and more human-readable design design-patterns.
+                </p>
+                <h2 id="project-reflection">Project Reflection</h2>
+                <p>
+                    Overall the project satisfies the MVP. I think the visual
+                    design could be more similar to the inspired product,
+                    however I feel like the current iteration looks good.
+                </p>
+                <p>
+                    I do want to look into giving the calculator more features.
+                    I like the idea of having it evaluate expression while also
+                    respecting order of operations. I also want to give some
+                    feedback to the user when it does something that the code
+                    doesn&#39;t allow (e.g. a red outline when the user tries to
+                    add a number with nothing).
+                </p>
             </section>
         </main>
 
