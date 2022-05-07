@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/ecommerce-project/static/css/main.03214003.css",
+    "main.js": "/ecommerce-project/static/js/main.31e57d03.js",
+    "static/media/film-camera-image.jpg": "/ecommerce-project/static/media/film-camera-image.3e6074f314e66ef112bc.jpg",
+    "static/media/film-image.jpg": "/ecommerce-project/static/media/film-image.6798092e3ed529476204.jpg",
+    "static/media/add-to-favorites.svg": "/ecommerce-project/static/media/add-to-favorites.2d438b1f9d5751ab180d7adaba043c38.svg",
+    "static/media/burger.svg": "/ecommerce-project/static/media/burger.af7efc61ab1b270cf664e71243fb4025.svg",
+    "static/media/logo.svg": "/ecommerce-project/static/media/logo.16ca00a906720b392eb7bf984f61e631.svg",
+    "index.html": "/ecommerce-project/index.html",
+    "static/media/arrow.svg": "/ecommerce-project/static/media/arrow.a0f81365cc9f563fa19c740cd2aa20ab.svg",
+    "static/media/red-heart.svg": "/ecommerce-project/static/media/red-heart.db5f2c5f77bae45dfa1986fa8b9fc6c7.svg",
+    "main.03214003.css.map": "/ecommerce-project/static/css/main.03214003.css.map",
+    "main.31e57d03.js.map": "/ecommerce-project/static/js/main.31e57d03.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03214003.css",
+    "static/js/main.31e57d03.js"
+  ]
+}
