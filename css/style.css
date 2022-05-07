@@ -240,6 +240,10 @@ p {
   padding: 2.5rem 0;
   position: relative;
 }
+.selected-work .work__link {
+  color: black;
+  text-decoration: none;
+}
 .selected-work .work__content {
   display: flex;
   flex-direction: column;
