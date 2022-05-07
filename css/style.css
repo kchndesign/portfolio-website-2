@@ -277,7 +277,7 @@ p {
   font-size: 1rem;
   margin: 0.2rem 0.2rem;
   padding: 0rem 1em;
-  background-color: #f2f2f2;
+  background-color: rgb(242, 242, 242);
   border-radius: 3rem;
 }
 @media (min-width: 768px) {
@@ -292,7 +292,7 @@ p {
 }
 .selected-work .bg-color {
   position: relative;
-  background-color: #f2f2f2;
+  background-color: rgb(242, 242, 242);
   color: black;
   position: relative;
   overflow: visible;
@@ -305,7 +305,7 @@ p {
   height: 100%;
   top: 0;
   right: 100%;
-  background-color: #f2f2f2;
+  background-color: rgb(242, 242, 242);
   z-index: -1;
 }
 .selected-work .bg-color::after {
@@ -315,7 +315,7 @@ p {
   height: 100%;
   top: 0;
   left: 100%;
-  background-color: #f2f2f2;
+  background-color: rgb(242, 242, 242);
   z-index: -1;
 }
 .selected-work .bg-color .work__chip {
@@ -379,7 +379,7 @@ p {
 
 .footer {
   position: relative;
-  background-color: #323232;
+  background-color: rgb(50, 50, 50);
   color: white;
   padding: 5rem 0 0 0;
 }
@@ -390,7 +390,7 @@ p {
   height: 100%;
   top: 0;
   right: 100%;
-  background-color: #323232;
+  background-color: rgb(50, 50, 50);
   z-index: -1;
 }
 .footer::after {
@@ -400,7 +400,7 @@ p {
   height: 100%;
   top: 0;
   left: 100%;
-  background-color: #323232;
+  background-color: rgb(50, 50, 50);
   z-index: -1;
 }
 .footer > div {
@@ -855,7 +855,7 @@ body.light .contact__link {
   margin: 3rem 0;
 }
 .gallery__cell {
-  flex-basis: 16rem;
+  flex-basis: 25rem;
   flex-grow: 1;
   flex-shrink: 1;
   height: 20rem;

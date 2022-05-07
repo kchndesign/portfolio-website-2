@@ -4,3 +4,6 @@
 [submodule "morse-code-translator"]
 	path = morse-code-translator
 	url = git@github.com:kchndesign/morse-code-translator.git
+[submodule "ecommerce-project"]
+	path = ecommerce-project
+	url = git@github.com:kchndesign/ecommerce-project.git
