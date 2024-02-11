@@ -10,68 +10,45 @@
             src="https://kit.fontawesome.com/65d37cc92e.js"
             crossorigin="anonymous"
         ></script>
-        <title>Kevin Chen - Full Stack Developer and Designer</title>
+        <title>Software Engineer and Designer | Kevin Chen</title>
+
         <meta
             name="description"
-            content="
-            Hi! I'm Kevin Chen. I'm a product designer and full-stack web-developer based in Sydney. 
-            I'm passionate about creating web experiences that are user-centred and accessible.  
-        "
+            content="Hi! I'm Kevin Chen. I'm a designer and full-stack software engineer whose mission is to build usable and compelling experiences."
+        />
+
+        <meta
+            content="Software Engineer and Designer | Kevin Chen"
+            property="og:title"
+        />
+
+        <meta
+            content="Hi! I'm Kevin Chen. I'm a designer and full-stack software engineer whose mission is to build usable and compelling experiences."
+            property="og:description"
+        />
+
+        <meta property="og:url" content="https://kchn.com.au/" />
+
+        <meta
+            property="og:image"
+            content="https://kchn.com.au/img/logo_colour.png"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            href="./img/logo2_black_outline.png"
         />
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg fixed-top bg-white navbar-light">
-            <div class="container-fluid container-mw">
-                <a href="index.html" class="navbar-brand">
-                    <img src="/img/logo2_black_outline.webp" alt="brand logo" />
-                </a>
-
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarResponsive"
-                    aria-controls="navbarResponsive"
-                    aria-expanded="false"
-                    aria-label="toggle Navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item px-2">
-                            <a href="index.html" class="nav-link active"
-                                >Home</a
-                            >
-                        </li>
-                        <li class="nav-item px-2">
-                            <a href="web-dev.html" class="nav-link"
-                                >Web Development</a
-                            >
-                        </li>
-                        <li class="nav-item px-2">
-                            <a href="graphics-design.html" class="nav-link"
-                                >Graphics Design</a
-                            >
-                        </li>
-                        <li class="nav-item px-2">
-                            <a href="product-design.html" class="nav-link"
-                                >Product Design</a
-                            >
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
         <main class="container-mw">
-            <div class="blocker"></div>
             <section class="hero row" aria-label="Hero Section">
                 <div
                     class="col-md-6 hero__left text-center text-md-right d-none d-sm-flex flex-column align-items-center justify-content-center"
                 >
-                    <img src="./img/logo-colour.webp" alt="The kchn logo." />
+                    <img src="./img/logo_colour.png" alt="The kchn logo." />
                 </div>
                 <div
                     class="col-md-6 hero__right d-flex flex-column align-items-center align-items-md-start justify-content-center"
@@ -80,89 +57,50 @@
                         Hi, I'm Kevin
                     </h1>
                     <h2 class="hero__byline text-center text-md-start">
-                        designer and full stack dev
+                        Designer and Software Engineer
                     </h2>
                     <p class="hero__para">
-                        I graduated with a degree in Product Design at UTS
-                        before jumping into a full-stack consultancy program at
-                        _nology.
-                    </p>
-                    <p class="hero__para">
-                        I have used my graphics design, UX design and web
-                        development skills to help businesses realise their
-                        digital transformations. I’m all about having a holistic
-                        perspective and varied skillset so I can be effective at
-                        whatever I’m doing.
+                        I'm a designer and full-stack software engineer whose
+                        mission is to build usable and compelling experiences.
                     </p>
                 </div>
             </section>
 
-            <section class="links" aria-label="Website Links">
-                <ul class="links__list row">
-                    <li class="col-md-4">
-                        <a href="web-dev.html" class="links__link link--web">
-                            <svg viewBox="0 0 110 36">
-                                <text x="0" y="15">Web</text>
-                                <text x="0" y="30">Development</text>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="col-md-4">
-                        <a
-                            href="./graphics-design.html"
-                            class="links__link link--graphics"
-                        >
-                            <div class="link__container">
-                                <div class="link__logo-block">
-                                    <img
-                                        src="/img/logo2_white_outline.webp"
-                                        alt="kevin's logo"
-                                    />
-                                </div>
-                                <p class="link__title">Graphics Design</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-md-4">
-                        <a
-                            href="./product-design.html"
-                            class="links__link link--product"
-                        >
-                            <svg viewBox="0 0 110 36">
-                                <text x="0" y="15">Product</text>
-                                <text x="0" y="30">Design</text>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </section>
             <section class="selected-work">
-                <div class="selected-work__header">
-                    <h2>Selected Work</h2>
-                </div>
-                <div class="work bg-color row g-0">
+                <div class="work bg-color-freespirits row g-0">
+                    <a
+                        href="./projects/free-spirits-website.html"
+                        class="work__link d-none d-md-block"
+                    >
+                        <h3 class="work__title">Free Spirits Dance Co.</h3>
+                    </a>
+
                     <div
-                        class="work__content col-md-6 order-1 order-md-0 work--left"
+                        class="work__content col-md-6 order-3 order-md-0 work--left"
                     >
                         <a
                             href="./projects/free-spirits-website.html"
-                            class="work__link"
+                            class="work__link d-md-none d-block"
                         >
-                            <h3 class="work__title">
-                                Free Spirits Dance Co. Branding and Website
-                            </h3>
+                            <h3 class="work__title">Free Spirits Dance Co.</h3>
                         </a>
+                        <p class="fw-bold">
+                            Software Engineer | Brand Designer
+                        </p>
                         <p class="work__body">
                             Free Spirits Dance Co. is a successful dance studio
-                            here in Sydney. I helped the business owners
-                            transform their design identity and build their
-                            online presence as they expanded their business
-                            model.
+                            here in Sydney. I helped the business scale their
+                            marketing and operations by unifying the branding
+                            identity across marketing and social channels and
+                            building a custom web application to support their
+                            booking infrastructure.
                         </p>
                         <div class="work__chip-container">
                             <p class="work__chip">Graphics Design</p>
                             <p class="work__chip">UX/UI Design</p>
-                            <p class="work__chip">HTML / CSS / JS</p>
+                            <p class="work__chip">
+                                Web Application Development
+                            </p>
                         </div>
                     </div>
                     <a
@@ -178,103 +116,72 @@
 
                 <div class="work row g-0">
                     <a
-                        href="./projects/ecommerce.html"
-                        class="work__image col-md-6 work--left"
+                        href="./projects/free-spirits-website.html"
+                        class="work__link d-none d-md-block color-resonate"
+                    >
+                        <h3 class="work__title">Resonate Solutions</h3>
+                    </a>
+
+                    <a
+                        href="./projects/free-spirits-website.html"
+                        class="work__image col-md-6 order-0 order-md-0 work--right"
                     >
                         <img
-                            src="./img/ecommerce/screenshot.png"
-                            alt="Screenshot of the ecommerce project."
-                            style="filter: brightness(0.97)"
+                            src="./img/resonate_mock.png"
+                            alt="Image of a website mockup for Free Spirits Dance Co."
                         />
                     </a>
-                    <div class="work__content col-md-6 work--right">
-                        <a href="./projects/ecommerce.html" class="work__link">
-                            <h3 class="work__title">
-                                Mock Ecommerce website in React
-                            </h3>
+
+                    <div
+                        class="work__content col-md-6 order-3 order-md-1 work--right"
+                    >
+                        <a
+                            href="./projects/free-spirits-website.html"
+                            class="work__link d-md-none d-block color-resonate"
+                        >
+                            <h3 class="work__title">Resonate Solutions</h3>
                         </a>
+                        <p class="fw-bold">Software Engineer | Product Owner</p>
                         <p class="work__body">
-                            This is a mock e-commerce website that uses
-                            create-react-app and firestore. The products are
-                            stored as firestore documents and user interactions
-                            requiring persistence like a favourites product list
-                            or adding products to their cart using localStorage.
+                            Resonate Solutions provides a comprehensive customer
+                            experience and employee experience management
+                            platform for clients all over the world. As well as
+                            developing customer-facing products, I own a
+                            cornerstone internal tool that equips the
+                            organisation to serve a multitude of corporate
+                            clients.
                         </p>
                         <div class="work__chip-container">
-                            <p class="work__chip">create-react-app</p>
-                            <p class="work__chip">react-router-dom</p>
-                            <p class="work__chip">Firestore & Firebase</p>
+                            <p class="work__chip">Product Ownership</p>
+                            <p class="work__chip">Full Stack</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="work bg-color row g-0">
-                    <div
-                        class="work__content col-md-6 order-1 order-md-0 work--left"
-                    >
-                        <a
-                            href="./projects/js-calculator.html"
-                            class="work__link"
-                        >
-                            <h3 class="work__title">
-                                JavaScript Neuemorphic Calculator
-                            </h3>
-                        </a>
-                        <p class="work__body">
-                            This project is a simple calculator written in
-                            vanilla Javascript. It has a 'neuemorphic' style
-                            interface made with HTML/SCSS. It takes some design
-                            inspiration from the Teenage Engineering OP-1.
-                        </p>
-                        <div class="work__chip-container">
-                            <p class="work__chip">HTML CSS</p>
-                            <p class="work__chip">Vanilla JavaScript</p>
-                        </div>
-                    </div>
+                <div class="work bg-color-industrial row g-0">
                     <a
-                        href="./projects/js-calculator.html"
-                        class="work__image col-md-6 order-0 order-md-1 work--right"
+                        href="./product-design.html"
+                        class="work__link d-none d-md-block"
                     >
-                        <img
-                            src="./jsCalculator/README-images/calculator-screenshot.png"
-                            alt="Screenshot of the javascript calculator project."
-                        />
+                        <h3 class="work__title">Product Design Projects</h3>
                     </a>
-                </div>
 
-                <div class="work row g-0">
-                    <a
-                        href="./projects/chinatown-neue.html"
-                        class="work__image col-md-6 order-1 order-md-0 work--left"
-                    >
-                        <img
-                            src="./img/chinatown-neue/lantern-posters.webp"
-                            alt="Mockup of some posters related to the UX concept."
-                        />
-                    </a>
                     <div
-                        class="work__content col-md-6 order-0 order-md-1 work--right"
+                        class="work__content my-auto my-md-0 col-md-6 order-3 order-md-0 work--left"
                     >
                         <a
-                            href="./projects/chinatown-neue.html"
-                            class="work__link"
+                            href="./product-design.html"
+                            class="work__link d-md-none d-block"
                         >
-                            <h3 class="work__title">
-                                Chinatown Neue UX Design Project
-                            </h3>
+                            <h3 class="work__title">Product Design Projects</h3>
                         </a>
-                        <p class="work__body">
-                            Working with stakeholders from the City of Sydney,
-                            we were tasked with finding creative and actionable
-                            ways of revitalising the CBD and its surrounds
-                            post-COVID. This UX concept employs the use of QR
-                            codes and gameified interactivity to encourage
-                            visitors to re-discover the Haymarket area of
-                            Sydney.
+                        <p class="fw-bold">
+                            Industrial design and UX design projects
                         </p>
-                        <div class="work__chip-container">
-                            <p class="work__chip">Experience Design</p>
-                        </div>
+                        <p class="work__body">
+                            Projects completed from university coursework and
+                            industry placements.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -350,7 +257,7 @@
 
         <footer class="footer footer--dark row container-mw">
             <div class="footer__logo col-12 col-md-4 order-3 order-md-0">
-                <img src="/img/logo2_white_outline.webp" alt="Kevin's Logo" />
+                <img src="/img/logo2_white_outline.png" alt="Kevin's Logo" />
             </div>
             <div class="footer__nav col-12 col-sm-6 col-md-4">
                 <div class="footer__links-wrapper">

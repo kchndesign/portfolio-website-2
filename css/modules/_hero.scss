@@ -1,10 +1,8 @@
 @use "../partials" as *;
 
-.blocker {
-    height: 4.5rem;
-}
-
 .hero {
+    @include bg-color($logo-bg);
+
     &__left {
         margin: 3rem 0;
 
