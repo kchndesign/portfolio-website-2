@@ -1,5 +1,9 @@
 @use "../partials" as *;
 
+.blocker {
+    height: 3rem;
+}
+
 .hero {
     @include bg-color($logo-bg);
 
@@ -20,7 +24,7 @@
         }
 
         .hero__byline {
-            font-size: 2.25;
+            font-size: 2.25rem;
             font-weight: 200;
         }
 

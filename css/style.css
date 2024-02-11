@@ -56,6 +56,10 @@ p {
   font-size: 1.3rem;
 }
 
+.blocker {
+  height: 3rem;
+}
+
 .hero {
   position: relative;
   background-color: #edeedb;
@@ -95,7 +99,7 @@ p {
   font-size: 3rem;
 }
 .hero__right .hero__byline {
-  font-size: 2.25;
+  font-size: 2.25rem;
   font-weight: 200;
 }
 .hero__right .hero__para {
@@ -977,7 +981,7 @@ body.light .contact__link {
   }
 }
 .project__main {
-  padding: 5rem 0;
+  margin: 5rem 0;
 }
 .project__main img {
   width: 100%;
@@ -1000,6 +1004,30 @@ body.light .contact__link {
   width: 286px;
   height: 600px;
   margin: 3rem auto;
+}
+
+.proprietary {
+  position: relative;
+  z-index: 0;
+}
+.proprietary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(0.5rem);
+}
+.proprietary::after {
+  content: "Unfortunately, this section contains proprietary information";
+  position: absolute;
+  max-width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: inherit;
+  font-weight: bold;
 }
 
 .ux-hero {
