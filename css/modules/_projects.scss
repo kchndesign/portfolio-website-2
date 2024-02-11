@@ -1,7 +1,7 @@
-@use '../partials' as *;
+@use "../partials" as *;
 
 .project__main {
-    padding: 5rem 0;
+    margin: 5rem 0;
     img {
         width: 100%;
 
@@ -28,5 +28,37 @@
         width: 286px;
         height: 600px;
         margin: 3rem auto;
+    }
+}
+
+.proprietary {
+    position: relative;
+    z-index: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        backdrop-filter: blur(0.5rem);
+    }
+
+    &::after {
+        content: "Unfortunately, this section contains proprietary information";
+        position: absolute;
+        max-width: 100%;
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+
+        font-family: inherit;
+        font-weight: bold;
     }
 }

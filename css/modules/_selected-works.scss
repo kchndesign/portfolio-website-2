@@ -13,15 +13,28 @@
     .work {
         padding: 2.5rem 0;
         position: relative;
+        min-height: 100vh;
 
         &__link {
-            color: black;
+            color: inherit;
             text-decoration: none;
+
+            @include media-breakpoint-up(md) {
+                margin-top: auto;
+                h3 {
+                    font-size: 2.75rem;
+                }
+            }
+
+            @include media-breakpoint-up(xl) {
+                h3 {
+                    font-size: 3.5rem;
+                }
+            }
         }
 
         &__content {
-            display: flex;
-            flex-direction: column;
+            margin-bottom: auto;
 
             @include media-breakpoint-down(md) {
                 padding: 2rem;
@@ -41,6 +54,11 @@
                 max-height: 18rem;
 
                 margin: auto;
+
+                @include media-breakpoint-up(md) {
+                    margin: 0;
+                    margin-bottom: auto;
+                }
             }
         }
 
@@ -82,12 +100,13 @@
         }
     }
 
-    // backgroudn color class
-    .bg-color {
-        @include bg-color($work-bg);
+    // background color class
+    @mixin bg-color-specific($color) {
+        @include bg-color($color);
 
         .work__chip {
             background-color: white;
+            color: black;
         }
 
         position: relative;
@@ -96,5 +115,40 @@
         z-index: 0;
 
         // side color bits
+    }
+
+    .bg-color-freespirits {
+        @include bg-color-specific($freespirits-color);
+    }
+
+    .bg-color-industrial {
+        background-color: transparent;
+
+        color: white;
+
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            position: absolute;
+            content: "";
+
+            width: 100vw;
+            height: 100%;
+
+            top: 0;
+            left: calc(((100vw - 100%) / 2) * -1);
+
+            z-index: -1;
+
+            background-image: url("/img/sora/4.png");
+            background-position: center;
+            background-size: cover;
+            filter: brightness(0.3);
+        }
+    }
+
+    .color-resonate {
+        color: $resonate-color;
     }
 }

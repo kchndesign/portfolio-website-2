@@ -8,6 +8,16 @@ $h2-size: 2.25rem;
 $h3-size: 1.5rem;
 $p-size: 1.125rem;
 
+// branding
+$logo-bg: #edeedb;
+$logo-text: #cee4f2;
+
+// freespirits branding
+$freespirits-color: #ffe3e7;
+
+// rsn cx branding
+$resonate-color: #931639;
+
 // index styling
 $work-bg: rgb(242, 242, 242);
 $chip-radius: 3rem;
@@ -47,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-family: Poppins, Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
 
